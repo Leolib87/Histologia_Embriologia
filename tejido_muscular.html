@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-gray-900">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Interactiva de Tejido Muscular</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo para la barra de desplazamiento en modo oscuro */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* gray-900 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* gray-700 */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* gray-500 */
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="h-full text-gray-200">
+
+    <!-- Contenedor principal que ocupa toda la pantalla y permite el scroll interno -->
+    <div class="h-full overflow-y-auto">
+        
+        <!-- Envoltura para centrar el contenido y añadir padding -->
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+        
+            <!-- Encabezado -->
+            <header class="text-center mb-8">
+                <h1 class="text-4xl sm:text-5xl font-bold text-blue-400">Guía Interactiva de Tejido Muscular</h1>
+                <p class="text-lg text-gray-400 mt-2">Explora la estructura, función y tipos de músculo.</p>
+            </header>
+
+            <!-- Contenido principal con las pestañas -->
+            <main>
+                <div class="bg-gray-800 rounded-2xl shadow-2xl shadow-blue-500/10 overflow-hidden">
+                    <!-- Navegación de Pestañas -->
+                    <div class="border-b border-gray-700">
+                        <nav class="flex flex-wrap -mb-px" id="tab-nav">
+                            <a href="#" class="tab-btn active-tab flex items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base transition-colors duration-300" data-tab="inicio">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                                Inicio
+                            </a>
+                            <a href="#" class="tab-btn flex items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base transition-colors duration-300" data-tab="tipos">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0l2-2m0 0l2 2m-2-2v2"></path></svg>
+                                Tipos de Músculo
+                            </a>
+                            <a href="#" class="tab-btn flex items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base transition-colors duration-300" data-tab="contraccion">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                Contracción
+                            </a>
+                            <a href="#" class="tab-btn flex items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base transition-colors duration-300" data-tab="energia">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5z"></path></svg>
+                                Energía y Regeneración
+                            </a>
+                            <a href="#" class="tab-btn flex items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base transition-colors duration-300" data-tab="comparativa">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m3 6V7m-9 4h3m-3 4h3m-3-8h3m-3-4h3M3 3h18v18H3V3z"></path></svg>
+                                Tabla Comparativa
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- Contenido de las Pestañas -->
+                    <div class="p-6 sm:p-8">
+                        <!-- Pestaña Inicio -->
+                        <div id="inicio" class="tab-content active">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-4">¿Qué es el Tejido Muscular?</h2>
+                            <p class="mb-6 text-lg text-gray-300">Es uno de los cuatro tejidos fundamentales del cuerpo, compuesto por células especializadas llamadas <strong>fibras musculares</strong> o <strong>miocitos</strong>. Su principal característica es la capacidad de contraerse para generar fuerza y movimiento.</p>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="bg-gray-700/50 p-6 rounded-lg border border-blue-500/30">
+                                    <h3 class="text-xl font-semibold text-blue-300 mb-3">Funciones Principales</h3>
+                                    <ul class="space-y-2 list-disc list-inside text-gray-300">
+                                        <li><strong>Producir movimiento corporal:</strong> Acciones voluntarias como correr, escribir o hablar.</li>
+                                        <li><strong>Mantener la postura:</strong> Estabiliza las articulaciones y la posición del cuerpo.</li>
+                                        <li><strong>Movilizar sustancias internas:</strong> Impulsa la sangre y mueve los alimentos.</li>
+                                        <li><strong>Generar calor (termogénesis):</strong> Mantiene la temperatura corporal.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-700/50 p-6 rounded-lg border border-green-500/30">
+                                    <h3 class="text-xl font-semibold text-green-300 mb-3">Propiedades Fundamentales</h3>
+                                    <ul class="space-y-2 list-disc list-inside text-gray-300">
+                                        <li><strong>Excitabilidad eléctrica:</strong> Responde a estímulos generando señales eléctricas.</li>
+                                        <li><strong>Contractilidad:</strong> Capacidad de contraerse enérgicamente.</li>
+                                        <li><strong>Extensibilidad:</strong> Capacidad de estirarse sin ser dañado.</li>
+                                        <li><strong>Elasticidad:</strong> Recupera su forma original tras estirarse o contraerse.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña Tipos de Músculo -->
+                        <div id="tipos" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">Tipos de Tejido Muscular</h2>
+                            <div class="space-y-8">
+                                <div class="p-6 rounded-lg bg-gray-700/50 border border-gray-600 shadow-sm">
+                                    <h3 class="text-2xl font-semibold text-indigo-400 mb-3">A. Músculo Esquelético (Voluntario)</h3>
+                                    <p class="mb-4 text-gray-300">Es el más abundante y se une a los huesos. Sus fibras son largas, cilíndricas, multinucleadas y presentan <strong>estrías</strong>.</p>
+                                    <div class="flex flex-wrap gap-4">
+                                        <span class="bg-indigo-500/20 text-indigo-300 text-sm font-medium px-3 py-1 rounded-full">Movimiento del esqueleto</span>
+                                        <span class="bg-indigo-500/20 text-indigo-300 text-sm font-medium px-3 py-1 rounded-full">Postura</span>
+                                        <span class="bg-indigo-500/20 text-indigo-300 text-sm font-medium px-3 py-1 rounded-full">Producción de calor</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 rounded-lg bg-gray-700/50 border border-gray-600 shadow-sm">
+                                    <h3 class="text-2xl font-semibold text-pink-400 mb-3">B. Músculo Cardíaco (Involuntario)</h3>
+                                    <p class="mb-4 text-gray-300">Forma la pared del corazón (miocardio). Es <strong>estriado</strong>, con fibras ramificadas conectadas por <strong>discos intercalares</strong> que sincronizan el latido.</p>
+                                    <div class="flex flex-wrap gap-4">
+                                        <span class="bg-pink-500/20 text-pink-300 text-sm font-medium px-3 py-1 rounded-full">Bombeo de sangre</span>
+                                        <span class="bg-pink-500/20 text-pink-300 text-sm font-medium px-3 py-1 rounded-full">Rítmico y continuo</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 rounded-lg bg-gray-700/50 border border-gray-600 shadow-sm">
+                                    <h3 class="text-2xl font-semibold text-teal-400 mb-3">C. Músculo Liso (Involuntario)</h3>
+                                    <p class="mb-4 text-gray-300">Se encuentra en las paredes de órganos huecos (estómago, vasos sanguíneos). Sus fibras son fusiformes y <strong>no presentan estrías</strong>.</p>
+                                    <div class="flex flex-wrap gap-4">
+                                        <span class="bg-teal-500/20 text-teal-300 text-sm font-medium px-3 py-1 rounded-full">Peristalsis (digestión)</span>
+                                        <span class="bg-teal-500/20 text-teal-300 text-sm font-medium px-3 py-1 rounded-full">Regulación presión arterial</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña Contracción -->
+                        <div id="contraccion" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-4">Estructura y Contracción Muscular</h2>
+                            <p class="text-lg text-gray-400 mb-6">La contracción es un proceso complejo a nivel microscópico, basado en la <strong>Teoría del Filamento Deslizante</strong>.</p>
+                            <div class="bg-gray-700/50 p-6 rounded-lg border border-gray-600">
+                                <h3 class="text-2xl font-semibold text-gray-100 mb-4">Mecanismo de Contracción</h3>
+                                <ol class="relative border-l border-gray-600 space-y-6">
+                                    <li class="ml-6">
+                                        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-900 rounded-full -left-3 ring-8 ring-gray-700/50 text-blue-300">1</span>
+                                        <h4 class="font-semibold text-gray-100">Estímulo Nervioso</h4>
+                                        <p class="text-gray-400">Un impulso nervioso llega a la fibra muscular.</p>
+                                    </li>
+                                    <li class="ml-6">
+                                        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-900 rounded-full -left-3 ring-8 ring-gray-700/50 text-blue-300">2</span>
+                                        <h4 class="font-semibold text-gray-100">Liberación de Calcio ($Ca^{2+}$)</h4>
+                                        <p class="text-gray-400">El estímulo provoca la liberación de calcio del retículo sarcoplásmico.</p>
+                                    </li>
+                                    <li class="ml-6">
+                                        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-900 rounded-full -left-3 ring-8 ring-gray-700/50 text-blue-300">3</span>
+                                        <h4 class="font-semibold text-gray-100">Unión Actina-Miosina</h4>
+                                        <p class="text-gray-400">El calcio permite que las cabezas de miosina se unan a los filamentos de actina.</p>
+                                    </li>
+                                    <li class="ml-6">
+                                        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-900 rounded-full -left-3 ring-8 ring-gray-700/50 text-blue-300">4</span>
+                                        <h4 class="font-semibold text-gray-100">Golpe de Fuerza</h4>
+                                        <p class="text-gray-400">Usando ATP, las cabezas de miosina tiran de la actina, acortando el sarcómero.</p>
+                                    </li>
+                                    <li class="ml-6">
+                                        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-900 rounded-full -left-3 ring-8 ring-gray-700/50 text-blue-300">5</span>
+                                        <h4 class="font-semibold text-gray-100">Relajación</h4>
+                                        <p class="text-gray-400">Al cesar el estímulo, el calcio se retira y la fibra vuelve a su estado inicial.</p>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña Energía y Regeneración -->
+                        <div id="energia" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">Energía y Regeneración</h2>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h3 class="text-2xl font-semibold text-yellow-400 mb-4">Fuentes de Energía (ATP)</h3>
+                                    <div class="space-y-4">
+                                        <div class="p-4 bg-yellow-500/10 rounded-lg border border-yellow-500/30">
+                                            <h4 class="font-bold text-yellow-300">1. Creatina Fosfato</h4>
+                                            <p class="text-gray-300">Energía para ráfagas explosivas (~15 seg).</p>
+                                        </div>
+                                        <div class="p-4 bg-yellow-500/10 rounded-lg border border-yellow-500/30">
+                                            <h4 class="font-bold text-yellow-300">2. Glucólisis Anaeróbica</h4>
+                                            <p class="text-gray-300">Energía rápida sin O₂ (~30-40 seg), produce ácido láctico.</p>
+                                        </div>
+                                        <div class="p-4 bg-yellow-500/10 rounded-lg border border-yellow-500/30">
+                                            <h4 class="font-bold text-yellow-300">3. Respiración Celular Aeróbica</h4>
+                                            <p class="text-gray-300">Energía sostenida con O₂, para actividades largas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-semibold text-cyan-400 mb-4">Capacidad de Regeneración</h3>
+                                    <div class="space-y-4">
+                                        <div class="p-4 bg-cyan-500/10 rounded-lg border border-cyan-500/30">
+                                            <h4 class="font-bold text-cyan-300">Músculo Esquelético</h4>
+                                            <p class="text-gray-300"><strong>Limitada</strong>, gracias a las células satélite.</p>
+                                        </div>
+                                        <div class="p-4 bg-cyan-500/10 rounded-lg border border-cyan-500/30">
+                                            <h4 class="font-bold text-cyan-300">Músculo Cardíaco</h4>
+                                            <p class="text-gray-300"><strong>Casi nula</strong>. Las lesiones se reparan con tejido cicatricial no contráctil.</p>
+                                        </div>
+                                        <div class="p-4 bg-cyan-500/10 rounded-lg border border-cyan-500/30">
+                                            <h4 class="font-bold text-cyan-300">Músculo Liso</h4>
+                                            <p class="text-gray-300"><strong>Buena</strong>. Tiene la mayor capacidad regenerativa de los tres.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña Tabla Comparativa -->
+                        <div id="comparativa" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">Tabla Comparativa</h2>
+                            <div class="overflow-x-auto rounded-lg border border-gray-700">
+                                <table class="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr>
+                                            <th class="p-4 bg-gray-700 font-semibold border-b-2 border-gray-600">Característica</th>
+                                            <th class="p-4 bg-indigo-900/40 font-semibold border-b-2 border-gray-600 text-indigo-300">M. Esquelético</th>
+                                            <th class="p-4 bg-pink-900/40 font-semibold border-b-2 border-gray-600 text-pink-300">M. Cardíaco</th>
+                                            <th class="p-4 bg-teal-900/40 font-semibold border-b-2 border-gray-600 text-teal-300">M. Liso</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-700">
+                                        <tr class="hover:bg-gray-700/50 transition-colors">
+                                            <td class="p-4 font-semibold">Apariencia</td>
+                                            <td class="p-4">Estriado</td>
+                                            <td class="p-4">Estriado</td>
+                                            <td class="p-4">No estriado (liso)</td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-700/50 transition-colors">
+                                            <td class="p-4 font-semibold">Forma de la Célula</td>
+                                            <td class="p-4">Cilíndrica y larga</td>
+                                            <td class="p-4">Ramificada y corta</td>
+                                            <td class="p-4">Fusiforme</td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-700/50 transition-colors">
+                                            <td class="p-4 font-semibold">Número de Núcleos</td>
+                                            <td class="p-4">Multinucleada</td>
+                                            <td class="p-4">Uno o dos</td>
+                                            <td class="p-4">Uninucleada</td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-700/50 transition-colors">
+                                            <td class="p-4 font-semibold">Control Nervioso</td>
+                                            <td class="p-4">Voluntario</td>
+                                            <td class="p-4">Involuntario</td>
+                                            <td class="p-4">Involuntario</td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-700/50 transition-colors">
+                                            <td class="p-4 font-semibold">Regeneración</td>
+                                            <td class="p-4">Limitada</td>
+                                            <td class="p-4">Casi nula</td>
+                                            <td class="p-4">Buena</td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-700/50 transition-colors">
+                                            <td class="p-4 font-semibold">Ubicación</td>
+                                            <td class="p-4">Unido a los huesos</td>
+                                            <td class="p-4">Pared del corazón</td>
+                                            <td class="p-4">Paredes de órganos huecos</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+            <footer class="text-center mt-8 text-gray-500 text-sm">
+                <p>&copy; 2024 Guía Interactiva. Creado para facilitar el aprendizaje.</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        // Lógica para el funcionamiento de las pestañas
+        const tabNav = document.getElementById('tab-nav');
+        const tabBtns = tabNav.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        // Estilos para los botones de las pestañas
+        const activeClasses = 'border-blue-500 text-blue-400 bg-gray-700/50';
+        const inactiveClasses = 'border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-500';
+
+        // Función para inicializar los estilos de los botones
+        function initializeTabs() {
+            tabBtns.forEach(btn => {
+                if (btn.classList.contains('active-tab')) {
+                    btn.classList.add(...activeClasses.split(' '));
+                    btn.classList.remove(...inactiveClasses.split(' '));
+                } else {
+                    btn.classList.add(...inactiveClasses.split(' '));
+                    btn.classList.remove(...activeClasses.split(' '));
+                }
+            });
+        }
+        
+        tabNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            const clickedTab = e.target.closest('.tab-btn');
+            
+            if (!clickedTab) return;
+
+            // Actualizar el estado de los botones
+            tabBtns.forEach(btn => {
+                btn.classList.remove(...activeClasses.split(' '));
+                btn.classList.add(...inactiveClasses.split(' '));
+            });
+            clickedTab.classList.add(...activeClasses.split(' '));
+            clickedTab.classList.remove(...inactiveClasses.split(' '));
+
+            // Mostrar el contenido de la pestaña seleccionada
+            const tabId = clickedTab.dataset.tab;
+            tabContents.forEach(content => {
+                if (content.id === tabId) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+        });
+
+        // Inicializar los estilos al cargar la página
+        initializeTabs();
+    </script>
+</body>
+</html>
