@@ -46,12 +46,13 @@
   <!-- Canvas para la animación de Three.js -->
   <canvas id="bg-canvas"></canvas>
 
-  <!-- Contenedor principal del contenido -->
-  <div class="content-wrapper container mx-auto px-6 py-12 max-w-4xl text-center">
+  <!-- Contenedor principal del contenido, ahora ocupa toda la pantalla y centra el contenido -->
+  <div class="content-wrapper min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 text-center">
     <h1 class="text-4xl sm:text-5xl font-bold text-blue-400 mb-4">Guía Interactiva de Histología y Desarrollo</h1>
-    <p class="text-lg text-gray-400 mb-10">Selecciona una sección para comenzar tu estudio</p>
+    <p class="text-lg text-gray-400 mb-10 max-w-3xl">Selecciona una sección para comenzar tu estudio</p>
 
-    <div class="grid gap-6 md:grid-cols-2">
+    <!-- La rejilla ahora es más ancha en pantallas grandes pero se adapta a pequeñas -->
+    <div class="grid w-full max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
       <!-- Tarjeta de Tejido Epitelial -->
       <a href="#" onclick="return false;" class="block bg-gray-800/80 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-blue-500/20">
         <h2 class="text-2xl font-semibold text-blue-300 mb-2">Tejido Epitelial</h2>
