@@ -46,46 +46,51 @@
   <!-- Canvas para la animación de Three.js -->
   <canvas id="bg-canvas"></canvas>
 
-  <!-- Contenedor principal del contenido, ahora ocupa toda la pantalla y centra el contenido -->
-  <div class="content-wrapper min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 text-center">
-    <h1 class="text-4xl sm:text-5xl font-bold text-blue-400 mb-4">Guía Interactiva de Histología y Desarrollo</h1>
-    <p class="text-lg text-gray-400 mb-10 max-w-3xl">Selecciona una sección para comenzar tu estudio</p>
+  <!-- Contenedor principal reestructurado para un layout full-screen robusto -->
+  <div class="content-wrapper min-h-screen flex flex-col">
+    
+    <!-- El contenido principal ahora usa flex-grow para ocupar el espacio disponible -->
+    <main class="flex-grow flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold text-blue-400 mb-4">Guía Interactiva de Histología y Desarrollo</h1>
+      <p class="text-lg text-gray-400 mb-10 max-w-3xl">Selecciona una sección para comenzar tu estudio</p>
 
-    <!-- La rejilla ahora es más ancha en pantallas grandes pero se adapta a pequeñas -->
-    <div class="grid w-full max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Tarjeta de Tejido Epitelial -->
-      <a href="#" onclick="return false;" class="block bg-gray-800/80 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-blue-500/20">
-        <h2 class="text-2xl font-semibold text-blue-300 mb-2">Tejido Epitelial</h2>
-        <p class="text-gray-400 text-sm">Funciones, tipos y estructuras que recubren superficies.</p>
-      </a>
-      <!-- Tarjeta de Tejido Conectivo -->
-      <a href="#" onclick="return false;" class="block bg-gray-800/80 backdrop-blur-sm border border-green-500/30 hover:border-green-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-green-500/20">
-        <h2 class="text-2xl font-semibold text-green-300 mb-2">Tejido Conectivo</h2>
-        <p class="text-gray-400 text-sm">Sustento estructural, fibras, células y matriz extracelular.</p>
-      </a>
-      <!-- Tarjeta de Tejido Muscular -->
-      <a href="#" onclick="return false;" class="block bg-gray-800/80 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-pink-500/20">
-        <h2 class="text-2xl font-semibold text-pink-300 mb-2">Tejido Muscular</h2>
-        <p class="text-gray-400 text-sm">Contracción, tipos de músculo y fisiología.</p>
-      </a>
-      <!-- Tarjeta de Tejido Nervioso -->
-      <a href="#" onclick="return false;" class="block bg-gray-800/80 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-purple-500/20">
-        <h2 class="text-2xl font-semibold text-purple-300 mb-2">Tejido Nervioso</h2>
-        <p class="text-gray-400 text-sm">Neuronas, glía y organización del sistema nervioso.</p>
-      </a>
-      <!-- Tarjeta de Embriología -->
-      <a href="#" onclick="return false;" class="block bg-gray-800/80 backdrop-blur-sm border border-yellow-500/30 hover:border-yellow-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-yellow-500/20">
-        <h2 class="text-2xl font-semibold text-yellow-300 mb-2">Embriología</h2>
-        <p class="text-gray-400 text-sm">Fecundación, gastrulación, capas germinativas y más.</p>
-      </a>
-      <!-- Tarjeta de Desarrollo del Oído -->
-      <a href="#" onclick="return false;" class="block bg-gray-800/80 backdrop-blur-sm border border-cyan-500/30 hover:border-cyan-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-cyan-500/20">
-        <h2 class="text-2xl font-semibold text-cyan-300 mb-2">Desarrollo del Oído</h2>
-        <p class="text-gray-400 text-sm">Otocisto, vesículas, cavidades y morfogénesis del oído.</p>
-      </a>
-    </div>
+      <!-- La rejilla ahora es más ancha en pantallas grandes pero se adapta a pequeñas -->
+      <div class="grid w-full max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Tarjeta de Tejido Epitelial -->
+        <a href="#" onclick="return false;" class="block bg-gray-800/80 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-blue-500/20">
+          <h2 class="text-2xl font-semibold text-blue-300 mb-2">Tejido Epitelial</h2>
+          <p class="text-gray-400 text-sm">Funciones, tipos y estructuras que recubren superficies.</p>
+        </a>
+        <!-- Tarjeta de Tejido Conectivo -->
+        <a href="#" onclick="return false;" class="block bg-gray-800/80 backdrop-blur-sm border border-green-500/30 hover:border-green-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-green-500/20">
+          <h2 class="text-2xl font-semibold text-green-300 mb-2">Tejido Conectivo</h2>
+          <p class="text-gray-400 text-sm">Sustento estructural, fibras, células y matriz extracelular.</p>
+        </a>
+        <!-- Tarjeta de Tejido Muscular -->
+        <a href="#" onclick="return false;" class="block bg-gray-800/80 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-pink-500/20">
+          <h2 class="text-2xl font-semibold text-pink-300 mb-2">Tejido Muscular</h2>
+          <p class="text-gray-400 text-sm">Contracción, tipos de músculo y fisiología.</p>
+        </a>
+        <!-- Tarjeta de Tejido Nervioso -->
+        <a href="#" onclick="return false;" class="block bg-gray-800/80 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-purple-500/20">
+          <h2 class="text-2xl font-semibold text-purple-300 mb-2">Tejido Nervioso</h2>
+          <p class="text-gray-400 text-sm">Neuronas, glía y organización del sistema nervioso.</p>
+        </a>
+        <!-- Tarjeta de Embriología -->
+        <a href="#" onclick="return false;" class="block bg-gray-800/80 backdrop-blur-sm border border-yellow-500/30 hover:border-yellow-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-yellow-500/20">
+          <h2 class="text-2xl font-semibold text-yellow-300 mb-2">Embriología</h2>
+          <p class="text-gray-400 text-sm">Fecundación, gastrulación, capas germinativas y más.</p>
+        </a>
+        <!-- Tarjeta de Desarrollo del Oído -->
+        <a href="#" onclick="return false;" class="block bg-gray-800/80 backdrop-blur-sm border border-cyan-500/30 hover:border-cyan-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-cyan-500/20">
+          <h2 class="text-2xl font-semibold text-cyan-300 mb-2">Desarrollo del Oído</h2>
+          <p class="text-gray-400 text-sm">Otocisto, vesículas, cavidades y morfogénesis del oído.</p>
+        </a>
+      </div>
+    </main>
 
-    <footer class="mt-12 text-sm text-gray-500">
+    <!-- El footer se empuja a la parte inferior de la pantalla -->
+    <footer class="w-full p-4 text-sm text-center text-gray-500">
       <p>&copy; 2024 Guía Interactiva. Diseñada para el aprendizaje autónomo.</p>
     </footer>
   </div>
