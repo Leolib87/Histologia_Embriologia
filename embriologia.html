@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-gray-900">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Desarrollo Embrionario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1a202c; }
+        ::-webkit-scrollbar-thumb { background: #4a5568; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #718096; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .active-tab {
+            border-color: #60a5fa; /* border-blue-400 */
+            color: #60a5fa; /* text-blue-400 */
+            background-color: rgba(55, 65, 81, 0.5); /* bg-gray-700/50 */
+        }
+        .inactive-tab {
+            border-color: transparent;
+            color: #9ca3af; /* text-gray-400 */
+        }
+        .inactive-tab:hover {
+            color: #e5e7eb; /* hover:text-gray-200 */
+            border-color: #4b5563; /* hover:border-gray-500 */
+        }
+    </style>
+</head>
+<body class="h-full text-gray-200">
+
+    <div class="h-full overflow-y-auto">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+        
+            <header class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl font-bold text-blue-400">Guía de Desarrollo Embrionario</h1>
+                <p class="text-lg text-gray-400 mt-2">De Cigoto a Néurula: El viaje de una célula a un organismo.</p>
+            </header>
+
+            <main>
+                <div class="bg-gray-800 rounded-2xl shadow-2xl shadow-blue-500/10 overflow-hidden">
+                    <div class="border-b border-gray-700">
+                        <nav class="flex flex-wrap -mb-px" id="tab-nav">
+                            <a href="#" class="tab-btn active-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="semana1">Primera Semana</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="gastrulacion">Gastrulación</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="neurulacion">Neurulación</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="resumen">Tabla Resumen</a>
+                        </nav>
+                    </div>
+
+                    <div class="p-6 sm:p-8">
+                        <!-- Pestaña Semana 1: Fecundación, Segmentación y Blastulación -->
+                        <div id="semana1" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">1. Primera Semana: El Comienzo de la Vida</h2>
+                            <div class="space-y-8">
+                                <!-- Fecundación -->
+                                <div class="bg-gray-700/50 p-6 rounded-lg border border-purple-500/30">
+                                    <h3 class="text-xl font-semibold text-purple-300 mb-3">Fecundación y Formación del Cigoto</h3>
+                                    <p class="text-gray-300 mb-4">La vida de un nuevo individuo comienza con la <strong class="text-white">fecundación</strong>, la fusión de un espermatozoide y un ovocito en la trompa de Falopio. La unión de sus núcleos haploides (23 cromosomas cada uno) crea el <strong class="text-yellow-300">cigoto</strong>, una única célula diploide (46 cromosomas) con el plano genético completo.</p>
+                                    <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                        <img src="https://www.reproduccionasistida.org/wp-content/uploads/2020/09/formacion-del-cigoto.png.webp" alt="Formación del cigoto" class="w-full max-w-lg mx-auto h-auto rounded-md">
+                                        <figcaption class="mt-2 text-sm text-gray-400">Diagrama simplificado de un cigoto, la primera célula del nuevo organismo.</figcaption>
+                                    </figure>
+                                </div>
+
+                                <!-- Segmentación -->
+                                <div class="bg-gray-700/50 p-6 rounded-lg border border-purple-500/30">
+                                    <h3 class="text-xl font-semibold text-purple-300 mb-3">Segmentación: De una a muchas células</h3>
+                                    <p class="text-gray-300 mb-4">El cigoto inicia una serie de divisiones mitóticas rápidas llamadas <strong class="text-white">segmentación</strong>. Las células resultantes, los <strong class="text-white">blastómeros</strong>, se hacen más pequeñas con cada división. Este proceso continúa hasta formar una estructura más compleja llamada <strong class="text-yellow-300">blastocisto</strong>.</p>
+                                    <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                        <img src="https://www.reproduccionasistida.org/wp-content/uploads/2017/11/formacio%CC%81n-del-embrio%CC%81n-desde-la-fecundacio%CC%81n.jpg" alt="Proceso de segmentación hasta blastocisto" class="w-full max-w-2xl mx-auto h-auto rounded-md">
+                                        <figcaption class="mt-2 text-sm text-gray-400">Proceso de segmentación desde el cigoto hasta el blastocisto.</figcaption>
+                                    </figure>
+                                </div>
+
+                                <!-- Blastulación -->
+                                <div class="bg-gray-700/50 p-6 rounded-lg border border-purple-500/30">
+                                    <h3 class="text-xl font-semibold text-purple-300 mb-3">Blastulación: Formación del Blastocisto</h3>
+                                    <p class="text-gray-300 mb-4">Alrededor del día 5, la mórula se transforma en un <strong class="text-yellow-300">blastocisto</strong>. Ingresa líquido y se forma una cavidad interna, el <strong class="text-white">blastocele</strong>. El blastocisto es una estructura crucial para la implantación y tiene dos partes diferenciadas:</p>
+                                    <ul class="space-y-2 list-disc list-inside text-gray-300 mb-4">
+                                        <li><strong class="text-white">Embrioblasto (o Masa Celular Interna):</strong> Un grupo de células en un polo del blastocisto. Es crucial porque de aquí se formará el embrión propiamente dicho.</li>
+                                        <li><strong class="text-white">Trofoblasto:</strong> Una capa celular externa que rodea al embrioblasto y al blastocele. Su función principal es la implantación en el endometrio del útero y la formación de la parte embrionaria de la placenta.</li>
+                                    </ul>
+                                    <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                        <img src="https://babygest.com/es/wp-content/uploads/2015/04/Blastocisto.jpg" alt="Estructura del blastocisto" class="w-full max-w-lg mx-auto h-auto rounded-md">
+                                        <figcaption class="mt-2 text-sm text-gray-400">Estructura detallada del blastocisto.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña Gastrulación -->
+                        <div id="gastrulacion" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-4">2. Gastrulación: El Origen de la Complejidad</h2>
+                            <p class="mb-6 text-lg text-gray-300">La gastrulación es el evento crucial de la tercera semana. El disco embrionario bilaminar se reorganiza en un disco trilaminar, estableciendo la arquitectura básica del cuerpo a través de la formación de tres capas germinativas.</p>
+                            <div class="bg-gray-900/50 p-4 rounded-lg text-center mb-8">
+                                <img src="https://repositorio-uapa.cuaed.unam.mx/repositorio/moodle/pluginfile.php/2143/mod_resource/content/2/contenido/img/cont/9_trilaminar.png" alt="Gástrula con las tres capas germinativas" class="w-full max-w-xl mx-auto h-auto rounded-md">
+                                <figcaption class="mt-2 text-sm text-gray-400">Embrión trilaminar con las tres capas: ectodermo, mesodermo y endodermo.</figcaption>
+                            </div>
+                            <div class="bg-gray-700/50 p-6 rounded-lg border border-green-500/30">
+                                <h3 class="text-xl font-semibold text-green-300 mb-3">Las Tres Capas Germinativas</h3>
+                                <p class="text-gray-300 mb-4">A partir de un evento inicial llamado <strong class="text-white">línea primitiva</strong>, las células migran y se diferencian para formar:</p>
+                                <ul class="space-y-3 list-disc list-inside text-gray-300">
+                                    <li><strong class="text-yellow-300">Ectodermo (Capa Externa):</strong> Dará origen al sistema nervioso, la epidermis, el pelo y las uñas.</li>
+                                    <li><strong class="text-yellow-300">Mesodermo (Capa Media):</strong> Formará el sistema musculoesquelético, cardiovascular, riñones y sistema reproductor.</li>
+                                    <li><strong class="text-yellow-300">Endodermo (Capa Interna):</strong> Creará el revestimiento del tracto digestivo y respiratorio, así como el hígado y el páncreas.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Pestaña Neurulación -->
+                        <div id="neurulacion" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-4">3. Neurulación: El Comienzo del Sistema Nervioso</h2>
+                             <p class="mb-6 text-lg text-gray-300">Ocurre al final de la tercera semana. Es el proceso donde se forma el <strong class="text-yellow-300">tubo neural</strong>, precursor del cerebro y la médula espinal, a partir del ectodermo. El embrión en esta fase se llama <strong class="text-white">néurula</strong>.</p>
+                            <div class="bg-gray-900/50 p-4 rounded-lg text-center mb-8">
+                                <img src="https://o.quizlet.com/DcUripFf-cbFiehPfib5EQ_b.jpg" alt="Secuencia de la neurulación" class="w-full max-w-2xl mx-auto h-auto rounded-md">
+                                <figcaption class="mt-2 text-sm text-gray-400">Secuencia de la formación del tubo neural a partir del ectodermo.</figcaption>
+                            </div>
+                             <div class="grid md:grid-cols-2 gap-8 mb-8">
+                                <div class="bg-gray-700/50 p-6 rounded-lg border border-blue-500/30">
+                                    <h3 class="text-xl font-semibold text-blue-300 mb-3">Formación del Tubo Neural</h3>
+                                    <ol class="space-y-2 list-decimal list-inside text-gray-300">
+                                        <li><strong class="text-white">Inducción:</strong> La <strong class="text-yellow-300">notocorda</strong> (derivada del mesodermo) induce al ectodermo a formar la <strong class="text-white">placa neural</strong>.</li>
+                                        <li><strong class="text-white">Plegamiento:</strong> Los bordes de la placa se elevan (<strong class="text-white">pliegues neurales</strong>) y el centro se hunde (<strong class="text-white">surco neural</strong>).</li>
+                                        <li><strong class="text-white">Fusión:</strong> Los pliegues se encuentran y fusionan en la línea media, cerrando el tubo.</li>
+                                    </ol>
+                                </div>
+                                <div class="bg-gray-700/50 p-6 rounded-lg border border-blue-500/30">
+                                    <h3 class="text-xl font-semibold text-blue-300 mb-3">Células de la Cresta Neural</h3>
+                                    <p class="text-gray-300">Son un grupo de células que se separan durante el cierre del tubo. Son multipotentes y migran para formar una increíble variedad de estructuras, como:</p>
+                                     <ul class="space-y-2 list-disc list-inside text-gray-300 mt-2">
+                                        <li>Ganglios nerviosos</li>
+                                        <li>Melanocitos (células de pigmento)</li>
+                                        <li>Huesos y cartílagos de la cara</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Sección de Estructura de la Néurula -->
+                            <div class="bg-gray-700/50 p-6 rounded-lg border border-purple-500/30">
+                                <h3 class="text-2xl font-semibold text-purple-300 mb-4">Estructura y Componentes de la Néurula</h3>
+                                <div class="grid md:grid-cols-2 gap-8 items-center">
+                                    <div>
+                                        <p class="text-gray-300 mb-4">Un corte transversal de la néurula revela una organización compleja de las tres capas germinativas. Sus componentes principales son:</p>
+                                        <ul class="space-y-2 list-disc list-inside text-gray-300">
+                                            <li><strong class="text-white">Tubo Neural:</strong> Estructura hueca central derivada del ectodermo que formará el encéfalo y la médula espinal.</li>
+                                            <li><strong class="text-white">Cresta Neural:</strong> Células que se desprenden del tubo neural y migran.</li>
+                                            <li><strong class="text-white">Ectodermo Superficial:</strong> El resto del ectodermo que cubrirá al embrión, formando la futura epidermis.</li>
+                                            <li><strong class="text-white">Notocorda:</strong> Varilla mesodérmica que indujo la neurulación y define el eje del cuerpo.</li>
+                                            <li><strong class="text-white">Mesodermo diferenciado:</strong> Se organiza en somitas (que formarán vértebras y músculos), mesodermo intermedio (riñones) y mesodermo lateral.</li>
+                                            <li><strong class="text-white">Endodermo:</strong> La capa más interna, que formará el tubo digestivo.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxEPmL1BrD0eXfRTkAf8pLiIPctn7jfvxu0NnmQUZFZGRsvIx23dE4nDriHMFEOZ7kn6k&usqp=CAU" alt="Estructura de la Néurula" class="w-full mx-auto h-auto rounded-md">
+                                            <figcaption class="mt-2 text-sm text-gray-400">Diagrama de un corte transversal de la néurula mostrando sus componentes clave.</figcaption>
+                                        </figure>
+                                        <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                            <img src="https://embrionhands.uff.br/wp-content/uploads/sites/275/2020/07/neurula%C3%A7ao4.jpg" alt="Imagen de la néurula en MEB" class="w-full mx-auto h-auto rounded-md">
+                                            <figcaption class="mt-2 text-sm text-gray-400">Imagen de la néurula en MEB (Microscopio Electrónico de Barrido).</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña Resumen -->
+                        <div id="resumen" class="tab-content">
+                             <h2 class="text-3xl font-bold text-gray-100 mb-6">Tabla Resumen del Desarrollo Temprano</h2>
+                             <div class="overflow-x-auto">
+                                <table class="min-w-full bg-gray-700/50 rounded-lg">
+                                    <thead class="bg-gray-900/70">
+                                        <tr>
+                                            <th class="p-4 text-left text-sm font-semibold text-blue-300 uppercase tracking-wider">Etapa (Tiempo Aprox.)</th>
+                                            <th class="p-4 text-left text-sm font-semibold text-blue-300 uppercase tracking-wider">Proceso Principal</th>
+                                            <th class="p-4 text-left text-sm font-semibold text-blue-300 uppercase tracking-wider">Estructura Resultante</th>
+                                            <th class="p-4 text-left text-sm font-semibold text-blue-300 uppercase tracking-wider">Capas Involucradas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-600">
+                                        <tr class="hover:bg-gray-700">
+                                            <td class="p-4 font-medium text-white">Cigoto (Día 1)</td>
+                                            <td class="p-4">Fecundación</td>
+                                            <td class="p-4">Célula única diploide</td>
+                                            <td class="p-4">-</td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-700">
+                                            <td class="p-4 font-medium text-white">Segmentación (Días 2-4)</td>
+                                            <td class="p-4">Divisiones mitóticas</td>
+                                            <td class="p-4">Mórula (esfera de blastómeros)</td>
+                                            <td class="p-4">-</td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-700">
+                                            <td class="p-4 font-medium text-white">Blastulación (Días 5-7)</td>
+                                            <td class="p-4">Formación de cavidad</td>
+                                            <td class="p-4">Blastocisto (con embrioblasto y trofoblasto)</td>
+                                            <td class="p-4">-</td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-700">
+                                            <td class="p-4 font-medium text-white">Gastrulación (Semana 3)</td>
+                                            <td class="p-4">Migración celular</td>
+                                            <td class="p-4">Disco embrionario trilaminar</td>
+                                            <td class="p-4">Ectodermo, Mesodermo, Endodermo</td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-700">
+                                            <td class="p-4 font-medium text-white">Neurulación (Fin de Sem. 3)</td>
+                                            <td class="p-4">Plegamiento del ectodermo</td>
+                                            <td class="p-4">Néurula (con tubo neural)</td>
+                                            <td class="p-4">Ectodermo (inducido por el mesodermo)</td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-700">
+                                            <td class="p-4 font-medium text-white">Néurula</td>
+                                            <td class="p-4">Organización de capas</td>
+                                            <td class="p-4 text-sm">Tubo neural, Cresta neural, Ectodermo superficial, Notocorda, Mesodermo (somitas), Endodermo</td>
+                                            <td class="p-4">Ectodermo, Mesodermo, Endodermo</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+            
+            <footer class="text-center mt-12 text-gray-500 text-sm">
+                <p>&copy; 2024 Guía de Desarrollo Embrionario. Creado para facilitar el aprendizaje.</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        // --- SCRIPT DE NAVEGACIÓN POR PESTAÑAS ---
+        const tabNav = document.getElementById('tab-nav');
+        const tabBtns = tabNav.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const activeClasses = 'active-tab';
+        const inactiveClasses = 'inactive-tab';
+
+        tabNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            const clickedTab = e.target.closest('.tab-btn');
+            if (!clickedTab) return;
+
+            // Actualizar estilos de los botones
+            tabBtns.forEach(btn => {
+                btn.classList.remove(activeClasses);
+                btn.classList.add(inactiveClasses);
+            });
+            clickedTab.classList.add(activeClasses);
+            clickedTab.classList.remove(inactiveClasses);
+
+            // Actualizar visibilidad del contenido
+            const tabId = clickedTab.dataset.tab;
+            tabContents.forEach(content => {
+                content.classList.toggle('active', content.id === tabId);
+            });
+        });
+
+        // Activar la pestaña correcta al cargar
+        document.addEventListener('DOMContentLoaded', () => {
+            // Find the initially active tab button
+            const initialTab = document.querySelector('.tab-btn.active-tab');
+            if (initialTab) {
+                // Hide all tab contents first
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+                // Then show the correct one
+                const tabId = initialTab.dataset.tab;
+                const activeContent = document.getElementById(tabId);
+                if (activeContent) {
+                    activeContent.classList.add('active');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
