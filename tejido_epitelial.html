@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-gray-900">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Definitiva de Tejido Epitelial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1a202c; }
+        ::-webkit-scrollbar-thumb { background: #4a5568; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #718096; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .active-tab {
+            border-color: #60a5fa; /* border-blue-400 */
+            color: #60a5fa; /* text-blue-400 */
+            background-color: rgba(55, 65, 81, 0.5); /* bg-gray-700/50 */
+        }
+        .inactive-tab {
+            border-color: transparent;
+            color: #9ca3af; /* text-gray-400 */
+        }
+        .inactive-tab:hover {
+            color: #e5e7eb; /* hover:text-gray-200 */
+            border-color: #4b5563; /* hover:border-gray-500 */
+        }
+    </style>
+</head>
+<body class="h-full text-gray-200">
+
+    <div class="h-full overflow-y-auto">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+        
+            <header class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl font-bold text-blue-400">Guía Definitiva del Tejido Epitelial</h1>
+                <p class="text-lg text-gray-400 mt-2">Una exploración detallada de la estructura, clasificación y funciones del epitelio.</p>
+            </header>
+
+            <main>
+                <div class="bg-gray-800 rounded-2xl shadow-2xl shadow-blue-500/10 overflow-hidden">
+                    <div class="border-b border-gray-700">
+                        <nav class="flex flex-wrap -mb-px" id="tab-nav">
+                            <a href="#" class="tab-btn active-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="intro">Introducción</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="clasificacion">Clasificación</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="simple">Epitelio Simple</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="estratificado">Epitelio Estratificado</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="glandular">Glandular y Clínica</a>
+                        </nav>
+                    </div>
+
+                    <div class="p-6 sm:p-8">
+                        <!-- Pestaña Introducción -->
+                        <div id="intro" class="tab-content active">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-4">1. Introducción y Características Fundamentales</h2>
+                            <p class="mb-6 text-lg text-gray-300">El tejido epitelial es uno de los cuatro tipos básicos de tejido, constituido por células densamente unidas que recubren todas las superficies libres del cuerpo y forman las glándulas.</p>
+                            
+                            <div class="my-8">
+                                <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                    <img src="https://mmegias.webs.uvigo.es/a-iconos/epitelios-polaridad.png" alt="Diagrama de la polaridad del tejido epitelial" class="w-full max-w-md mx-auto h-auto rounded-md bg-white p-2">
+                                    <figcaption class="mt-2 text-sm text-gray-400">Figura 1. Polaridad de los epitelios. Los epitelios poseen un dominio basal o basolateral (en contacto u orientado hacia la lámina basal) y otro apical (hacia superficie libre del epitelio).</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="bg-gray-700/50 p-6 rounded-lg border border-blue-500/30 mb-6">
+                                <h3 class="text-xl font-semibold text-blue-300 mb-3">Distinción Principal</h3>
+                                <ul class="space-y-2 list-disc list-inside text-gray-300">
+                                    <li><strong>Epitelio de Revestimiento:</strong> Láminas que cubren superficies externas e internas, con funciones de protección, absorción y filtración.</li>
+                                    <li><strong>Epitelio Glandular:</strong> Células especializadas en la secreción de sustancias, formando glándulas.</li>
+                                </ul>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="bg-gray-700/50 p-6 rounded-lg border border-green-500/30">
+                                    <h3 class="text-xl font-semibold text-green-300 mb-3">Características Principales</h3>
+                                    <ul class="space-y-2 list-disc list-inside text-gray-300">
+                                        <li><strong class="text-yellow-300">Alta Celularidad:</strong> Células muy juntas con escasa matriz extracelular.</li>
+                                        <li><strong class="text-yellow-300">Polaridad:</strong> Tienen una superficie apical, lateral y basal definidas.</li>
+                                        <li><strong class="text-yellow-300">Membrana Basal:</strong> Se apoyan sobre una estructura que los ancla al tejido conectivo.</li>
+                                        <li><strong class="text-yellow-300">Avascularidad:</strong> No poseen vasos sanguíneos; se nutren por difusión.</li>
+                                        <li><strong class="text-yellow-300">Inervación:</strong> Contienen terminaciones nerviosas.</li>
+                                        <li><strong class="text-yellow-300">Alta Regeneración:</strong> Gran capacidad para renovarse y repararse.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-700/50 p-6 rounded-lg border border-purple-500/30">
+                                    <h3 class="text-xl font-semibold text-purple-300 mb-3">Funciones Generales</h3>
+                                    <ul class="space-y-2 list-disc list-inside text-gray-300">
+                                        <li><strong>Protección:</strong> Barrera contra daños mecánicos y químicos.</li>
+                                        <li><strong>Secreción:</strong> Producción de moco, hormonas y enzimas.</li>
+                                        <li><strong>Absorción:</strong> Asimilación de nutrientes.</li>
+                                        <li><strong>Transporte:</strong> Movimiento de partículas (ej. cilios).</li>
+                                        <li><strong>Filtración:</strong> Regulación del paso de sustancias.</li>
+                                        <li><strong>Recepción Sensorial:</strong> Detección de estímulos.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña Clasificación -->
+                        <div id="clasificacion" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">2. Clasificación de los Epitelios de Revestimiento</h2>
+                            <p class="text-lg text-gray-300 mb-6">Se clasifican según el <strong class="text-yellow-300">número de capas celulares</strong> y la <strong class="text-yellow-300">forma de las células</strong> superficiales.</p>
+
+                            <div class="my-8">
+                                <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                    <img src="https://mmegias.webs.uvigo.es/a-iconos/epitelio-esquema.png" alt="Clasificación del tejido epitelial" class="w-full max-w-2xl mx-auto h-auto rounded-md bg-white p-2">
+                                    <figcaption class="mt-2 text-sm text-gray-400">Figura 2: Diagrama de la clasificación de los epitelios de revestimiento.</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                                <div>
+                                    <h3 class="text-2xl font-semibold text-blue-300 mb-3">Por Número de Capas</h3>
+                                    <ul class="space-y-3 text-gray-300 list-disc list-inside">
+                                        <li><strong>Simple:</strong> Una sola capa. Ideal para absorción y filtración.</li>
+                                        <li><strong>Estratificado:</strong> Dos o más capas. Función principal de protección.</li>
+                                        <li><strong>Pseudoestratificado:</strong> Parece tener varias capas, pero es una sola. Todas las células tocan la membrana basal.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-semibold text-blue-300 mb-3">Por Forma Celular</h3>
+                                     <ul class="space-y-3 text-gray-300 list-disc list-inside">
+                                        <li><strong>Planas (Escamosas):</strong> Células aplanadas.</li>
+                                        <li><strong>Cúbicas:</strong> Células con forma de cubo.</li>
+                                        <li><strong>Cilíndricas (Columnares):</strong> Células altas, en forma de columna.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-100 mb-4">Tabla de Clasificación Combinada</h3>
+                                <div class="overflow-x-auto rounded-lg border border-gray-700">
+                                    <table class="w-full text-left border-collapse">
+                                        <thead>
+                                            <tr class="bg-gray-700">
+                                                <th class="p-4 font-semibold border-b-2 border-gray-600">N.º de Capas</th>
+                                                <th class="p-4 font-semibold border-b-2 border-gray-600">Forma Celular</th>
+                                                <th class="p-4 font-semibold border-b-2 border-gray-600">Tipo de Epitelio</th>
+                                                <th class="p-4 font-semibold border-b-2 border-gray-600">Función Principal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-gray-700">
+                                            <tr class="hover:bg-gray-700/50"><td class="p-4 font-semibold" rowspan="3">Simple</td><td class="p-4">Plana</td><td class="p-4">Epitelio Plano Simple</td><td class="p-4">Difusión, Filtración</td></tr>
+                                            <tr class="hover:bg-gray-700/50"><td class="p-4">Cúbica</td><td class="p-4">Epitelio Cúbico Simple</td><td class="p-4">Secreción, Absorción</td></tr>
+                                            <tr class="hover:bg-gray-700/50"><td class="p-4">Cilíndrica</td><td class="p-4">Epitelio Cilíndrico Simple</td><td class="p-4">Absorción, Secreción</td></tr>
+                                            <tr class="hover:bg-gray-700/50"><td class="p-4 font-semibold">Pseudoestratificado</td><td class="p-4">Cilíndrica</td><td class="p-4">Epitelio Cilíndrico Pseudoestratificado</td><td class="p-4">Secreción, Transporte</td></tr>
+                                            <tr class="hover:bg-gray-700/50"><td class="p-4 font-semibold" rowspan="4">Estratificado</td><td class="p-4">Plana</td><td class="p-4">Epitelio Plano Estratificado</td><td class="p-4">Protección</td></tr>
+                                            <tr class="hover:bg-gray-700/50"><td class="p-4">Cúbica</td><td class="p-4">Epitelio Cúbico Estratificado</td><td class="p-4">Protección, Secreción</td></tr>
+                                            <tr class="hover:bg-gray-700/50"><td class="p-4">Cilíndrica</td><td class="p-4">Epitelio Cilíndrico Estratificado</td><td class="p-4">Protección, Secreción</td></tr>
+                                            <tr class="hover:bg-gray-700/50"><td class="p-4">Variable</td><td class="p-4">Epitelio de Transición (Urotelio)</td><td class="p-4">Distensibilidad</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <figure class="bg-gray-900/50 p-4 rounded-lg text-center mt-8">
+                                    <img src="https://mmegias.webs.uvigo.es/a-iconos/epitelios-3D.png" alt="Dibujo de todos los tipos de epitelios" class="w-full max-w-3xl mx-auto h-auto rounded-md bg-white p-2">
+                                    <figcaption class="mt-2 text-sm text-gray-400">Figura 3: Representación tridimensional de los principales tipos de epitelio.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        
+                        <!-- Pestaña Epitelio Simple -->
+                        <div id="simple" class="tab-content">
+                             <h2 class="text-3xl font-bold text-gray-100 mb-6">3. Tipos de Epitelio Simple y Pseudoestratificado</h2>
+                             <div class="space-y-8">
+                                <div class="p-6 bg-gray-700/50 rounded-lg border border-gray-600">
+                                    <h3 class="text-2xl font-semibold text-blue-300 mb-2">Epitelio Plano Simple</h3>
+                                    <div class="grid md:grid-cols-2 gap-4 items-center">
+                                        <div>
+                                            <p class="text-gray-400 mb-2"><strong>Descripción:</strong> Una sola capa de células aplanadas.</p>
+                                            <p class="text-gray-400"><strong>Localización:</strong> Alvéolos pulmonares, vasos sanguíneos (endotelio), cavidades corporales (mesotelio).</p>
+                                        </div>
+                                        <figure>
+                                            <img src="https://mmegias.webs.uvigo.es/a-imagenes-grandes/imagenes/epit-simple-plano01.jpg" alt="Epitelio Plano Simple" class="w-full h-auto rounded-md">
+                                            <figcaption class="mt-2 text-xs text-gray-500 text-center">Órgano: vaso sanguíneo, endotelio. Especie: ratón (Mus musculus; mamíferos). Técnica: tinción con hematoxilina-eosina en cortes de 8 µm en parafina.</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="p-6 bg-gray-700/50 rounded-lg border border-gray-600">
+                                    <h3 class="text-2xl font-semibold text-blue-300 mb-2">Epitelio Cúbico Simple</h3>
+                                    <div class="grid md:grid-cols-2 gap-4 items-center">
+                                        <div>
+                                            <p class="text-gray-400 mb-2"><strong>Descripción:</strong> Una sola capa de células cúbicas.</p>
+                                            <p class="text-gray-400"><strong>Localización:</strong> Túbulos renales, conductos glandulares, superficie del ovario.</p>
+                                        </div>
+                                        <figure>
+                                            <img src="https://mmegias.webs.uvigo.es/a-imagenes-grandes/imagenes/epit-simple-cubico.jpg" alt="Epitelio Cúbico Simple" class="w-full h-auto rounded-md">
+                                            <figcaption class="mt-2 text-xs text-gray-500 text-center">Epitelio cúbico simple. Órgano: glándula exocrina de la tráquea, conducto excretor. Especie: ratón (Mus musculus; mamíferos). Técnica: PAS-hematoxilina en cortes de 8 µm en parafina.</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="p-6 bg-gray-700/50 rounded-lg border border-gray-600">
+                                    <h3 class="text-2xl font-semibold text-blue-300 mb-2">Epitelio Cilíndrico Simple</h3>
+                                    <div class="grid md:grid-cols-2 gap-4 items-center">
+                                        <div>
+                                            <p class="text-gray-400 mb-2"><strong>Descripción:</strong> Una sola capa de células columnares. Puede ser ciliado o no ciliado (con microvellosidades).</p>
+                                            <p class="text-gray-400"><strong>Localización:</strong> Tubo digestivo (no ciliado), trompas de Falopio (ciliado).</p>
+                                        </div>
+                                        <figure>
+                                            <img src="https://mmegias.webs.uvigo.es/a-imagenes-grandes/imagenes/epit-simple-prism01.jpg" alt="Epitelio Cilíndrico Simple" class="w-full h-auto rounded-md">
+                                            <figcaption class="mt-2 text-xs text-gray-500 text-center">Órgano: vesícula biliar, epitelio simple cilíndrico. Especie: humano (Homo sapiens; mamíferos). Técnica: hematoxilina-eosina en cortes de 8 µm en parafina.</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="p-6 bg-gray-700/50 rounded-lg border border-gray-600">
+                                    <h3 class="text-2xl font-semibold text-blue-300 mb-2">Epitelio Cilíndrico Pseudoestratificado</h3>
+                                    <div class="grid md:grid-cols-2 gap-4 items-center">
+                                        <div>
+                                            <p class="text-gray-400 mb-2"><strong>Descripción:</strong> Una capa de células de diferentes alturas, frecuentemente ciliado.</p>
+                                            <p class="text-gray-400"><strong>Localización:</strong> Tráquea y vías respiratorias superiores.</p>
+                                        </div>
+                                        <figure>
+                                            <img src="https://www.pathologylive.com/practicas-histologia/bandejas/files/e_r_ptah_40x007.jpg" alt="Epitelio Cilíndrico Pseudoestratificado" class="w-full h-auto rounded-md">
+                                            <figcaption class="mt-2 text-xs text-gray-500 text-center">Tráquea (PTAH) (40x). Epitelio respiratorio con núcleos (N) situados a diferentes alturas. Las células epiteliales poseen cilios (C) en su polo apical y corpúsculos basales (flecha). Se observan células caliciformes (asterisco).</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+
+                        <!-- Pestaña Epitelio Estratificado -->
+                        <div id="estratificado" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">4. Tipos de Epitelio Estratificado y de Transición</h2>
+                            <div class="space-y-8">
+                               <div class="p-6 bg-gray-700/50 rounded-lg border border-gray-600">
+                                   <h3 class="text-2xl font-semibold text-green-300 mb-2">Epitelio Plano Estratificado</h3>
+                                   <div class="grid md:grid-cols-2 gap-4 items-center">
+                                       <div>
+                                           <p class="text-gray-400 mb-2"><strong>Descripción:</strong> Múltiples capas con células superficiales planas. Ideal para protección.</p>
+                                           <p class="text-gray-400"><strong>Tipos:</strong> <strong class="text-white">Queratinizado</strong> (piel) con capa superficial muerta, y <strong class="text-white">No Queratinizado</strong> (boca, esófago) con capa superficial viva y húmeda.</p>
+                                       </div>
+                                       <figure>
+                                           <img src="https://www.kenhub.com/thumbor/xACxak7xVv6PTfu4ZK51pWqL6FE=/fit-in/1400x0/filters:fill(FFFFFF,true):watermark(/images/watermark_5000_10percent.png,0,0,0):watermark(/images/logo_url.png,-10,-10,0):format(jpeg)/images/overview_image/1932/v0MNimEaRyK3F5ecQTQ_skin-histology_med_mag_spanish.jpg" alt="Histología de la piel mostrando epitelio plano estratificado queratinizado" class="w-full h-auto rounded-md">
+                                           <figcaption class="mt-2 text-xs text-gray-500 text-center">Micrografía de epitelio plano estratificado queratinizado (epidermis de la piel).</figcaption>
+                                       </figure>
+                                   </div>
+                               </div>
+                               <div class="p-6 bg-gray-700/50 rounded-lg border border-gray-600">
+                                   <h3 class="text-2xl font-semibold text-green-300 mb-2">Epitelio Cúbico Estratificado</h3>
+                                   <div class="grid md:grid-cols-2 gap-4 items-center">
+                                       <div>
+                                           <p class="text-gray-400 mb-2"><strong>Descripción:</strong> Raro, generalmente dos capas de células cúbicas.</p>
+                                           <p class="text-gray-400"><strong>Localización:</strong> Conductos de glándulas sudoríparas y mamarias.</p>
+                                       </div>
+                                       <figure>
+                                           <img src="https://mmegias.webs.uvigo.es/a-imagenes-grandes/imagenes/epit-estratificado-cubico.jpg" alt="Epitelio Cúbico Estratificado" class="w-full h-auto rounded-md">
+                                           <figcaption class="mt-2 text-xs text-gray-500 text-center">Órgano: glándula salivar sublingual, conducto excretor, epitelio estratificado cúbico. Especie: ratón (Mus musculus; mamíferos). Técnica: tinción con hematoxilina en cortes de 8 µm en parafina.</figcaption>
+                                       </figure>
+                                   </div>
+                               </div>
+                               <div class="p-6 bg-gray-700/50 rounded-lg border border-gray-600">
+                                   <h3 class="text-2xl font-semibold text-green-300 mb-2">Epitelio Cilíndrico Estratificado</h3>
+                                   <div class="grid md:grid-cols-2 gap-4 items-center">
+                                       <div>
+                                           <p class="text-gray-400 mb-2"><strong>Descripción:</strong> Poco común, con capa apical de células cilíndricas.</p>
+                                           <p class="text-gray-400"><strong>Localización:</strong> Uretra masculina, grandes conductos glandulares.</p>
+                                       </div>
+                                       <figure>
+                                           <img src="https://mmegias.webs.uvigo.es/a-imagenes-grandes/imagenes/epit-estrat-prismatico.jpg" alt="Epitelio Cilíndrico Estratificado" class="w-full h-auto rounded-md">
+                                           <figcaption class="mt-2 text-xs text-gray-500 text-center">Órgano: uretra, epitelio estratificado cilíndrico. Especie: ratón (Mus musculus; mamíferos). Técnica: tinción de azán en cortes de 8 µm en parafina.</figcaption>
+                                       </figure>
+                                   </div>
+                               </div>
+                               <div class="p-6 bg-gray-700/50 rounded-lg border border-gray-600">
+                                   <h3 class="text-2xl font-semibold text-green-300 mb-2">Epitelio de Transición (Urotelio)</h3>
+                                   <div class="grid md:grid-cols-2 gap-4 items-center">
+                                       <div>
+                                           <p class="text-gray-400 mb-2"><strong>Descripción:</strong> Epitelio especializado que cambia de forma para permitir el estiramiento.</p>
+                                           <p class="text-gray-400"><strong>Localización:</strong> Exclusivo de las vías urinarias (vejiga, uréteres).</p>
+                                       </div>
+                                       <figure>
+                                           <img src="https://mmegias.webs.uvigo.es/a-imagenes-grandes/imagenes/epitelio-transicion-juntas.jpg" alt="Epitelio de Transición" class="w-full h-auto rounded-md">
+                                           <figcaption class="mt-2 text-xs text-gray-500 text-center">Órgano: vejiga urinaria, epitelio de transición. Especie: ratón (Mus musculus; mamíferos). Técnica: hematoxilina-eosina en cortes de 8 µm en parafina.</figcaption>
+                                       </figure>
+                                   </div>
+                               </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pestaña Glandular y Clínica -->
+                        <div id="glandular" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">5. Epitelio Glandular y Correlaciones Clínicas</h2>
+                            <div class="grid lg:grid-cols-2 gap-8">
+                                <div>
+                                    <h3 class="text-2xl font-semibold text-purple-300 mb-4">Epitelio Glandular</h3>
+                                    <figure class="my-4">
+                                        <img src="https://www.investiciencias.com/images/imagenes/glandulas%20endocrinas%20y%20exocrinas.jpg" alt="Comparación de glándulas endocrinas y exocrinas" class="w-full max-w-lg mx-auto h-auto rounded-md">
+                                        <figcaption class="mt-2 text-sm text-gray-400 text-center">Figura 3: Diferencia estructural entre glándulas endocrinas (sin conducto) y exocrinas (con conducto).</figcaption>
+                                    </figure>
+                                    <div class="space-y-4 mt-4">
+                                        <div class="p-4 bg-gray-700/50 rounded-lg">
+                                            <h4 class="font-bold text-lg text-white">Glándulas Endocrinas</h4>
+                                            <p class="text-gray-400">No tienen conductos. Secretan <strong class="text-yellow-300">hormonas</strong> directamente a la sangre. Ej: Tiroides, hipófisis.</p>
+                                        </div>
+                                        <div class="p-4 bg-gray-700/50 rounded-lg">
+                                            <h4 class="font-bold text-lg text-white">Glándulas Exocrinas</h4>
+                                            <p class="text-gray-400">Tienen conductos para liberar sus productos a una superficie. Ej: Sudoríparas, salivales.</p>
+                                            <p class="text-gray-400 mt-2"><strong>Mecanismos:</strong> Merocrina (exocitosis), Apocrina (pérdida de citoplasma), Holocrina (célula se desintegra).</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-semibold text-red-400 mb-4">Correlaciones Clínicas</h3>
+                                    <ul class="space-y-3 text-gray-300 list-disc list-inside">
+                                        <li><strong>Carcinoma:</strong> Cáncer originado en células epiteliales. Representa ~90% de los tumores malignos.</li>
+                                        <li><strong>Metaplasia:</strong> Cambio reversible de un tipo de epitelio a otro por un estímulo crónico (ej. en fumadores).</li>
+                                        <li><strong>Reparación de Heridas:</strong> La alta regeneración es vital para la cicatrización.</li>
+                                        <li><strong>Enfermedad Celíaca:</strong> Destrucción del epitelio absorbente del intestino por una reacción al gluten.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+            
+            <footer class="text-center mt-12 text-gray-500 text-sm">
+                <p>&copy; 2024 Guía Definitiva. Creado para facilitar el aprendizaje.</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        const tabNav = document.getElementById('tab-nav');
+        const tabBtns = tabNav.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const activeClasses = 'active-tab';
+        const inactiveClasses = 'inactive-tab';
+
+        tabNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            const clickedTab = e.target.closest('.tab-btn');
+            if (!clickedTab) return;
+
+            // Update button styles
+            tabBtns.forEach(btn => {
+                btn.classList.remove(activeClasses);
+                btn.classList.add(inactiveClasses);
+            });
+            clickedTab.classList.add(activeClasses);
+            clickedTab.classList.remove(inactiveClasses);
+
+            // Update content visibility
+            const tabId = clickedTab.dataset.tab;
+            tabContents.forEach(content => {
+                content.classList.toggle('active', content.id === tabId);
+            });
+        });
+    </script>
+</body>
+</html>
