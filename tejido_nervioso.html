@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Definitiva de Histología del Tejido Nervioso</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* --- Scrollbar Styles --- */
+        ::-webkit-scrollbar { width: 8px; }
+        .dark ::-webkit-scrollbar-track { background: #1a202c; }
+        .dark ::-webkit-scrollbar-thumb { background: #4a5568; border-radius: 10px; }
+        .dark ::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+        /* --- Tab Styles --- */
+        .active-tab {
+            border-color: #60a5fa; /* border-blue-400 */
+            color: #60a5fa; /* text-blue-400 */
+            background-color: rgba(55, 65, 81, 0.5); /* dark:bg-gray-700/50 */
+        }
+
+        .inactive-tab {
+            border-color: transparent;
+            color: #9ca3af; /* dark:text-gray-400 */
+        }
+        .inactive-tab:hover {
+            color: #e5e7eb; /* dark:hover:text-gray-200 */
+            border-color: #4b5563; /* dark:hover:border-gray-500 */
+        }
+    </style>
+</head>
+<body class="h-full bg-gray-900 text-gray-200">
+
+    <div class="h-full overflow-y-auto">
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+        
+            <header class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl font-bold text-blue-400">Guía Definitiva de Histología del Tejido Nervioso</h1>
+                <p class="text-lg text-gray-400 mt-2">Un análisis microscópico de las células y la arquitectura del sistema nervioso.</p>
+            </header>
+
+            <main>
+                <div class="bg-gray-800 rounded-2xl shadow-2xl shadow-blue-500/10 overflow-hidden">
+                    <div class="border-b border-gray-700">
+                        <nav class="flex flex-wrap -mb-px" id="tab-nav">
+                            <a href="#" class="tab-btn active-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="intro">Introducción</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="neurona">La Neurona</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="glia">La Glía</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="fibra">Fibra y Sinapsis</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="snc">Histología del SNC</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="snp">Histología del SNP</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="clinica">Correlación Clínica</a>
+                        </nav>
+                    </div>
+
+                    <div class="p-6 sm:p-8">
+                        <!-- Pestaña Introducción -->
+                        <div id="intro" class="tab-content active">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-4">1. El Tejido Nervioso: Una Visión General</h2>
+                            <p class="mb-6 text-lg text-gray-300">El tejido nervioso es el sustrato anatómico de todas las funciones superiores del organismo, incluyendo la cognición, la percepción, el control motor y la regulación de las funciones corporales. Su extraordinaria capacidad se basa en las propiedades de sus células y en su compleja organización arquitectónica.</p>
+                            <div class="bg-gray-700/50 p-6 rounded-lg border border-blue-500/30">
+                                <h3 class="text-xl font-semibold text-blue-300 mb-3">Divisiones Fundamentales</h3>
+                                <p class="text-gray-300">Anatómica y funcionalmente, el sistema nervioso se organiza en dos grandes divisiones, cada una con una histología distintiva:</p>
+                                <ul class="space-y-3 list-disc list-inside text-gray-300 mt-4">
+                                    <li><strong class="text-white">Sistema Nervioso Central (SNC):</strong> Compuesto por el <strong class="text-yellow-300">encéfalo</strong> y la <strong class="text-yellow-300">médula espinal</strong>. Es el centro de integración y procesamiento. Histológicamente, se caracteriza por la organización en sustancia gris y sustancia blanca.</li>
+                                    <li><strong class="text-white">Sistema Nervioso Periférico (SNP):</strong> Compuesto por los <strong class="text-yellow-300">nervios</strong> y los <strong class="text-yellow-300">ganglios</strong> nerviosos. Actúa como la red de comunicación que conecta el SNC con el resto del cuerpo.</li>
+                                </ul>
+                                <figure class="bg-gray-900/50 p-4 rounded-lg text-center my-8">
+                                    <img src="https://www.neurocirugiaequipodelatorre.es/wp-media/2020/08/como-se-divide-el-sistema-nervioso_-sistema-nervioso.jpg" alt="Divisiones del sistema nervioso" class="w-full max-w-lg mx-auto h-auto rounded-md">
+                                    <figcaption class="mt-2 text-sm text-gray-400">Figura 1. Esquema de las divisiones del sistema nervioso: central y periférico.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña La Neurona -->
+                        <div id="neurona" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">2. La Neurona: Citología e Histología</h2>
+                            <div class="grid lg:grid-cols-2 gap-8">
+                                <div class="space-y-6">
+                                    <h3 class="text-2xl font-semibold text-blue-300">El Soma o Pericarion</h3>
+                                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                                        <p class="text-gray-300 mb-4">Es el centro metabólico de la neurona.</p>
+                                        <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                                            <li><strong>Núcleo:</strong> Grande, esférico, de cromatina laxa (eucromático) con un nucléolo prominente.</li>
+                                            <li><strong>Cuerpos de Nissl:</strong> Acúmulos de RER y polirribosomas. Se ven como gránulos basófilos.</li>
+                                            <li><strong>Citoesqueleto:</strong> Compuesto por neurofilamentos y microtúbulos.</li>
+                                            <li><strong>Lipofuscina:</strong> Pigmento de desgaste que se acumula con la edad.</li>
+                                        </ul>
+                                        <figure class="mt-4">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Nissl_bodies_in_neurons_of_the_spinal_cord.jpg" alt="Micrografía de Cuerpos de Nissl" class="w-full h-auto rounded-md">
+                                            <figcaption class="mt-2 text-xs text-gray-500 text-center">Figura 2. Motoneurona con Cuerpos de Nissl prominentes.</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="space-y-6">
+                                    <h3 class="text-2xl font-semibold text-blue-300">Dendritas y Axón</h3>
+                                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                                        <h4 class="font-bold text-lg text-white">Dendritas</h4>
+                                        <p class="text-gray-300">Reciben sinapsis y contienen <strong class="text-yellow-300">espinas dendríticas</strong>, el principal sitio de contacto sináptico excitatorio.</p>
+                                        <figure class="mt-4">
+                                            <img src="https://static.vecteezy.com/system/resources/previews/002/488/609/non_2x/purkinje-neuron-dendritic-spines-free-photo.jpg" alt="Imagen de espinas dendríticas" class="w-full h-auto rounded-md">
+                                            <figcaption class="mt-2 text-xs text-gray-500 text-center">Figura 3. Neurona mostrando sus dendritas con espinas (tinción Golgi).</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                                        <h4 class="font-bold text-lg text-white">Axón</h4>
+                                        <p class="text-gray-300">Se origina en el <strong class="text-yellow-300">cono axónico</strong>, una región sin Cuerpos de Nissl. Depende del soma para el <strong class="text-yellow-300">transporte axonal</strong>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <figure class="mt-8 bg-gray-900/50 p-4 rounded-lg text-center">
+                                <img src="https://www.psycolab.com/wp-content/uploads/15286-scaled.jpg" alt="Ilustración de una neurona y su red sináptica" class="w-full max-w-2xl mx-auto h-auto rounded-md">
+                                <figcaption class="mt-2 text-sm text-gray-400">Figura 4. Ilustración de una neurona mostrando sus conexiones sinápticas.</figcaption>
+                            </figure>
+                            <figure class="mt-8 bg-gray-900/50 p-4 rounded-lg text-center">
+                                <img src="https://mmegias.webs.uvigo.es/a-iconos/nervioso-neurona.png" alt="Neurona teñida con Golgi" class="w-full max-w-2xl mx-auto h-auto rounded-md bg-white">
+                                <figcaption class="mt-2 text-sm text-gray-400">Figura 5. Imagen de una neurona de la corteza cerebral de un ratón teñida con la técnica de Golgi.</figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- Pestaña Glía -->
+                        <div id="glia" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">3. La Glía: Células de Soporte Histológico</h2>
+                            <div class="space-y-6">
+                                <div class="p-6 bg-gray-700/50 rounded-lg grid md:grid-cols-2 gap-6 items-center">
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-purple-300 mb-2">Astrocitos</h3>
+                                        <p class="text-gray-300">Las células gliales más grandes. Tipos: <strong class="text-white">Protoplasmáticos</strong> (sustancia gris) y <strong class="text-white">Fibrosos</strong> (sustancia blanca). Sus <strong class="text-yellow-300">pies perivasculares</strong> forman la barrera hematoencefálica.</p>
+                                    </div>
+                                    <figure>
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Astrocytes.jpg/1200px-Astrocytes.jpg" alt="Micrografía de astrocitos" class="w-full h-auto rounded-md">
+                                        <figcaption class="mt-2 text-xs text-gray-500 text-center">Figura 6. Astrocitos protoplasmáticos de la sustancia gris teñidos con la técnica de oro sublimado de Cajal.</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                                        <h3 class="text-xl font-semibold text-purple-300 mb-2">Oligodendrocitos y Células de Schwann</h3>
+                                        <p class="text-gray-300 mb-4">Responsables de la mielinización. Los <strong class="text-white">Oligodendrocitos</strong> (SNC) mielinizan múltiples axones. Las <strong class="text-white">Células de Schwann</strong> (SNP) mielinizan un solo segmento de un único axón.</p>
+                                        <div class="grid grid-cols-2 gap-2 mt-4">
+                                            <figure>
+                                                <img src="https://neurorgs.net/wp-content/uploads/2024/06/Oligodentrito.jpeg" alt="Esquema de un oligodendrocito" class="w-full h-auto rounded-md">
+                                                <figcaption class="mt-1 text-xs text-gray-500 text-center">Figura 7. Esquema de un oligodendrocito.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="https://udocz-images.b-cdn.net/documents_html/487568-486ed3ebf66d46065c60bf51531b30d8/bgb.jpg?width=2688" alt="Microfotografía de oligodendrocitos" class="w-full h-auto rounded-md">
+                                                <figcaption class="mt-1 text-xs text-gray-500 text-center">Figura 8. Microfotografía de oligodendrocitos.</figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                                        <h3 class="text-xl font-semibold text-purple-300 mb-2">Microglía y Células Ependimarias</h3>
+                                        <p class="text-gray-300 mb-4">La <strong class="text-white">Microglía</strong> son los macrófagos del SNC. Las <strong class="text-white">Células Ependimarias</strong> son un epitelio simple que reviste los ventrículos.</p>
+                                        <div class="grid grid-cols-2 gap-2 mt-4">
+                                            <figure>
+                                                <img src="https://thumbs.dreamstime.com/b/microglia-cells-rio-hortega-s-silver-carbonate-light-micrograph-stained-hortega-method-ramified-resting-372626083.jpg" alt="Micrografía de microglia" class="w-full h-auto rounded-md">
+                                                <figcaption class="mt-1 text-xs text-gray-500 text-center">Figura 9. Células de microglia ramificadas.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="https://www.kenhub.com/thumbor/w_IalU7ewhmENEDcCPh6V_98NUo=/fit-in/800x1600/filters:watermark(/images/logo_url.png,-10,-10,0):background_color(FFFFFF):format(jpeg)/images/article/microglia/celPT5krTqt5tgJBShb5mw_microglia.jpg" alt="Esquema de microglia" class="w-full h-auto rounded-md">
+                                                <figcaption class="mt-1 text-xs text-gray-500 text-center">Figura 10. Esquema de una célula de microglia.</figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña Fibra y Sinapsis -->
+                        <div id="fibra" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">4. Fibra Nerviosa y Sinapsis</h2>
+                            <div class="grid lg:grid-cols-2 gap-8">
+                                <div>
+                                    <h3 class="text-2xl font-semibold text-green-300 mb-3">La Fibra Nerviosa y Mielinización</h3>
+                                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                                        <p class="text-gray-300 mb-4">La <strong class="text-yellow-300">vaina de mielina</strong> está formada por capas de membrana glial. Entre los segmentos se encuentran los <strong class="text-yellow-300">Nódulos de Ranvier</strong>, para la conducción saltatoria.</p>
+                                        <div class="grid grid-cols-2 gap-2 mt-4">
+                                            <figure>
+                                                <img src="https://www.researchgate.net/publication/35403288/figure/fig4/AS:507458208661505@1497998873130/Figura-III7-Neurona-con-Axon-Mielinizado-Muestra-los-nodulos-de-Ranvier-sitios-donde.png" alt="Diagrama de Nódulos de Ranvier" class="w-full h-auto rounded-md">
+                                                <figcaption class="mt-1 text-xs text-gray-500 text-center">Figura 11. Axón mielinizado mostrando Nódulos de Ranvier.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/1842/2017/05/26234147/figure-35-02-05.jpeg" alt="Diagrama de la vaina de mielina" class="w-full h-auto rounded-md">
+                                                <figcaption class="mt-1 text-xs text-gray-500 text-center">Figura 12. Formación de la vaina de mielina.</figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-semibold text-green-300 mb-3">Ultraestructura de la Sinapsis</h3>
+                                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                                        <p class="text-gray-300 mb-4">Componentes ultraestructurales:</p>
+                                        <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                                            <li><strong>Elemento Presináptico:</strong> Con vesículas sinápticas.</li>
+                                            <li><strong>Hendidura Sináptica:</strong> Espacio intercelular.</li>
+                                            <li><strong>Elemento Postsináptico:</strong> Con receptores y la <strong class="text-yellow-300">densidad postsináptica</strong>.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña SNC -->
+                        <div id="snc" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">5. Histología del Sistema Nervioso Central (SNC)</h2>
+                            <div class="space-y-8">
+                                <div class="p-6 bg-gray-700/50 rounded-lg">
+                                    <h3 class="text-xl font-semibold text-cyan-300 mb-3">Principios de Organización del SNC</h3>
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <h4 class="font-bold text-lg text-white">Sustancia Gris</h4>
+                                            <p class="text-gray-400">Región de procesamiento, compuesta por somas, dendritas y el <strong class="text-yellow-300">neurópilo</strong>.</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg text-white">Sustancia Blanca</h4>
+                                            <p class="text-gray-400">Región de conducción, compuesta por axones mielinizados.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6 bg-gray-700/50 rounded-lg">
+                                    <h3 class="text-xl font-semibold text-cyan-300 mb-3">Arquitectura Regional</h3>
+                                    <ul class="space-y-4">
+                                        <li><h4 class="font-bold text-lg text-white">Corteza Cerebral:</h4><p class="text-gray-400">Organizada en seis capas (I-VI).</p></li>
+                                        <li><h4 class="font-bold text-lg text-white">Corteza Cerebelosa:</h4><p class="text-gray-400">Tres capas: Molecular, de Células de Purkinje y Granular.</p></li>
+                                        <li><h4 class="font-bold text-lg text-white">Médula Espinal:</h4><p class="text-gray-400">Sustancia gris central en forma de "H" (astas motoras y sensoriales) y sustancia blanca periférica.</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña SNP -->
+                        <div id="snp" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">6. Histología del Sistema Nervioso Periférico (SNP)</h2>
+                            <div class="space-y-8">
+                                <div class="p-6 bg-gray-700/50 rounded-lg">
+                                    <h3 class="text-2xl font-semibold text-yellow-300 mb-3">Nervios Periféricos</h3>
+                                    <p class="text-gray-300 mb-4">Capas de tejido conectivo:</p>
+                                    <ul class="space-y-2 text-gray-300 list-disc list-inside mb-4">
+                                        <li><strong>Endoneuro:</strong> Rodea cada fibra nerviosa.</li>
+                                        <li><strong>Perineuro:</strong> Rodea un fascículo y forma la <strong class="text-yellow-300">barrera hemato-neural</strong>.</li>
+                                        <li><strong>Epineuro:</strong> Rodea todo el nervio.</li>
+                                    </ul>
+                                    <figure>
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1319_Nerve_StructureN_esp.jpg" alt="Esquema de un nervio periférico" class="w-full h-auto rounded-md">
+                                        <figcaption class="mt-2 text-xs text-gray-500 text-center">Figura 13. Esquema de las cubiertas conectivas de un nervio.</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="p-6 bg-gray-700/50 rounded-lg">
+                                    <h3 class="text-2xl font-semibold text-yellow-300 mb-3">Ganglios Nerviosos</h3>
+                                    <p class="text-gray-300 mb-4">Acúmulos de somas neuronales rodeados por <strong class="text-white">células satélite</strong>.</p>
+                                    <div class="grid md:grid-cols-2 gap-4">
+                                        <figure>
+                                            <img src="https://mmegias.webs.uvigo.es/a-imagenes-grandes/imagenes/nervioso-ganglio-4.jpg" alt="Ganglio nervioso sensorial" class="w-full h-auto rounded-md">
+                                            <figcaption class="mt-2 text-xs text-gray-500 text-center">Figura 14. Ganglio sensorial (raíz dorsal).</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="https://mmegias.webs.uvigo.es/a-imagenes-grandes/imagenes/nervioso-ganglio-3.jpg" alt="Ganglio nervioso autónomo" class="w-full h-auto rounded-md">
+                                            <figcaption class="mt-2 text-xs text-gray-500 text-center">Figura 15. Ganglio autónomo (simpático).</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                                <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                    <img src="https://www.aula2005.com/html/cn3eso/11relaciosn/impulsonerviosocatala2es.jpg" alt="Comparativa entre ganglio y nervio espinal" class="w-full max-w-2xl mx-auto h-auto rounded-md">
+                                    <figcaption class="mt-2 text-sm text-gray-400">Figura 16. Comparativa esquemática entre un ganglio y un nervio espinal.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        
+                        <!-- Pestaña Clínica -->
+                        <div id="clinica" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">7. Correlación Clínico-Histopatológica</h2>
+                            <p class="text-lg text-gray-300 mb-6">La comprensión de la histología es fundamental para diagnosticar enfermedades del sistema nervioso.</p>
+                            <div class="space-y-6">
+                                <div class="p-6 bg-gray-700/50 rounded-lg border border-red-500/30">
+                                    <h3 class="text-xl font-semibold text-red-300 mb-3">Enfermedades Desmielinizantes</h3>
+                                    <p class="text-gray-300">Destrucción de la vaina de mielina. La histología revela pérdida de mielina e infiltración de células inmunitarias.</p>
+                                    <ul class="space-y-2 list-disc list-inside text-gray-300 mt-2">
+                                        <li><strong>Esclerosis Múltiple (SNC):</strong> Ataque autoinmune contra oligodendrocitos.</li>
+                                        <li><strong>Síndrome de Guillain-Barré (SNP):</strong> Ataque autoinmune contra células de Schwann.</li>
+                                    </ul>
+                                </div>
+                                <div class="p-6 bg-gray-700/50 rounded-lg border border-red-500/30">
+                                    <h3 class="text-xl font-semibold text-red-300 mb-3">Tumores del Sistema Nervioso</h3>
+                                    <p class="text-gray-300">La mayoría de los tumores primarios del SNC derivan de células gliales (gliomas).</p>
+                                    <ul class="space-y-2 list-disc list-inside text-gray-300 mt-2">
+                                        <li><strong>Astrocitomas:</strong> Tumores derivados de astrocitos.</li>
+                                        <li><strong>Schwannomas:</strong> Tumores benignos de las células de Schwann en el SNP.</li>
+                                    </ul>
+                                </div>
+                                <div class="p-6 bg-gray-700/50 rounded-lg border border-red-500/30">
+                                    <h3 class="text-xl font-semibold text-red-300 mb-3">Enfermedades Neurodegenerativas</h3>
+                                    <p class="text-gray-300">Pérdida progresiva de neuronas. La histopatología revela inclusiones proteicas anormales.</p>
+                                    <ul class="space-y-2 list-disc list-inside text-gray-300 mt-2">
+                                        <li><strong>Enfermedad de Alzheimer:</strong> Placas de beta-amiloide y ovillos de proteína tau.</li>
+                                        <li><strong>Enfermedad de Parkinson:</strong> Pérdida de neuronas dopaminérgicas y Cuerpos de Lewy.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+            
+            <footer class="text-center mt-12 text-gray-500 text-sm">
+                <p>&copy; 2024 Guía Definitiva de Histología del Tejido Nervioso. Creado para facilitar el aprendizaje.</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        // Tab functionality
+        const tabNav = document.getElementById('tab-nav');
+        const tabBtns = tabNav.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const activeClasses = 'active-tab';
+        const inactiveClasses = 'inactive-tab';
+
+        tabNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            const clickedTab = e.target.closest('.tab-btn');
+            if (!clickedTab) return;
+
+            tabBtns.forEach(btn => {
+                btn.classList.remove(activeClasses);
+                btn.classList.add(inactiveClasses);
+            });
+            clickedTab.classList.add(activeClasses);
+            clickedTab.classList.remove(inactiveClasses);
+
+            const tabId = clickedTab.dataset.tab;
+            tabContents.forEach(content => {
+                content.classList.toggle('active', content.id === tabId);
+            });
+        });
+    </script>
+</body>
+</html>
