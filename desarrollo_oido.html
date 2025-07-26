@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-gray-900">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa del Desarrollo del Oído</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1a202c; }
+        ::-webkit-scrollbar-thumb { background: #4a5568; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #718096; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .active-tab {
+            border-color: #60a5fa; /* border-blue-400 */
+            color: #60a5fa; /* text-blue-400 */
+            background-color: rgba(55, 65, 81, 0.5); /* bg-gray-700/50 */
+        }
+        .inactive-tab {
+            border-color: transparent;
+            color: #9ca3af; /* text-gray-400 */
+        }
+        .inactive-tab:hover {
+            color: #e5e7eb; /* hover:text-gray-200 */
+            border-color: #4b5563; /* hover:border-gray-500 */
+        }
+    </style>
+</head>
+<body class="h-full text-gray-200">
+
+    <div class="h-full overflow-y-auto">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+        
+            <header class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl font-bold text-blue-400">Guía Completa del Desarrollo del Oído</h1>
+                <p class="text-lg text-gray-400 mt-2">Una exploración embriológica detallada de la formación del oído interno, medio y externo.</p>
+            </header>
+
+            <main>
+                <div class="bg-gray-800 rounded-2xl shadow-2xl shadow-blue-500/10 overflow-hidden">
+                    <div class="border-b border-gray-700">
+                        <nav class="flex flex-wrap -mb-px" id="tab-nav">
+                            <a href="#" class="tab-btn active-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="intro">Introducción</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="interno">Oído Interno</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="medio">Oído Medio</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="externo">Oído Externo</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="resumen">Resumen</a>
+                        </nav>
+                    </div>
+
+                    <div class="p-6 sm:p-8">
+                        <!-- Pestaña Introducción -->
+                        <div id="intro" class="tab-content active">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-4">Introducción al Desarrollo del Oído</h2>
+                            <p class="mb-4 text-lg text-gray-300">El oído es un órgano dual con funciones de audición y equilibrio. Su desarrollo es un proceso increíblemente coordinado que involucra interacciones complejas entre las tres <strong class="text-yellow-300">capas germinales</strong>: el <strong class="text-yellow-300">ectodermo</strong> (que forma el laberinto membranoso y la piel externa), el <strong class="text-yellow-300">endodermo</strong> (que forma el revestimiento del oído medio) y el <strong class="text-yellow-300">mesodermo</strong> (que da origen a los huesecillos y cartílagos). Estudiar su embriología nos permite comprender no solo su anatomía final, sino también el origen de muchas malformaciones congénitas.</p>
+                            <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                <img src="https://www.nidcd.nih.gov/sites/default/files/2022-10/nidcd-ear-illustration-2000x1479_spanish_9-27-22-1.jpg" alt="Esquema de las tres partes del oído" class="w-full max-w-2xl mx-auto h-auto rounded-md">
+                                <figcaption class="mt-2 text-sm text-gray-400">Figura 1. Las tres partes anatómicas del oído: externo, medio e interno.</figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- Pestaña Oído Interno -->
+                        <div id="interno" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">1. Desarrollo del Oído Interno</h2>
+                            <p class="mb-4 text-lg text-gray-300">El oído interno es el primero en aparecer, comenzando su desarrollo muy temprano, alrededor de la <strong class="text-yellow-300">tercera semana</strong>. Es el componente sensorial principal, responsable de convertir las ondas sonoras y los movimientos de la cabeza en señales nerviosas.</p>
+                            <div class="space-y-6">
+                                <div class="p-4 bg-gray-700/50 rounded-lg">
+                                    <h4 class="font-bold text-lg text-white mb-2">Placoda, Fosita y Vesícula Ótica</h4>
+                                    <p class="text-gray-300">Todo comienza con una señal del notocordio y el mesodermo paraxial que induce un engrosamiento en el <strong class="text-yellow-300">ectodermo superficial</strong>, a ambos lados del <strong class="text-yellow-300">rombencéfalo</strong> (la porción posterior del cerebro en desarrollo). Este engrosamiento es la <strong class="text-yellow-300">placoda ótica</strong>. Poco después, la placoda se hunde o invagina, formando una depresión llamada <strong class="text-yellow-300">fosita ótica</strong>. Finalmente, los bordes de la fosita se fusionan y se separan del ectodermo superficial, creando una esfera hueca de células epiteliales: la <strong class="text-yellow-300">vesícula ótica</strong> u <strong class="text-yellow-300">otocisto</strong>. Esta vesícula es la estructura madre de todo el laberinto membranoso.</p>
+                                    <figure class="mt-4 bg-gray-900/50 p-4 rounded-lg text-center">
+                                        <img src="https://homomedicus.com/wp-content/uploads/2023/09/bg2-e1694263401913.png" alt="Diagrama de la invaginación de la placoda ótica" class="w-full max-w-lg mx-auto h-auto rounded-md">
+                                        <figcaption class="mt-2 text-sm text-gray-400">Figura 2. De la placoda a la vesícula ótica.</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="p-4 bg-gray-700/50 rounded-lg">
+                                    <h4 class="font-bold text-lg text-white mb-2">Diferenciación de la Vesícula y Ganglio</h4>
+                                    <p class="text-gray-300 mb-2">Una vez formada, la vesícula ótica se alarga y se diferencia en dos regiones funcionalmente distintas hacia la <strong class="text-yellow-300">sexta semana</strong>:</p>
+                                    <ul class="text-gray-300 list-disc list-inside pl-2 mt-1 mb-3">
+                                        <li><strong class="text-white">Componente Ventral (Pars Inferior):</strong> Se alarga y enrolla para formar el <strong class="text-yellow-300">conducto coclear</strong> (la futura cóclea), que contiene el <strong class="text-yellow-300">órgano de Corti</strong>, el epitelio sensorial de la audición. De esta porción también deriva el <strong class="text-yellow-300">sáculo</strong>.</li>
+                                        <li><strong class="text-white">Componente Dorsal (Pars Superior):</strong> Da origen a las estructuras del equilibrio: el <strong class="text-yellow-300">utrículo</strong>, los tres <strong class="text-yellow-300">conductos semicirculares</strong> y el <strong class="text-yellow-300">conducto endolinfático</strong>.</li>
+                                    </ul>
+                                    <figure class="my-4 bg-gray-900/50 p-4 rounded-lg text-center">
+                                        <img src="https://github.com/Leolib87/Histologia_Embriologia/blob/main/VESICULA%20OTICA%20.png?raw=true" alt="Diferenciación de la vesícula ótica" class="w-full max-w-md mx-auto h-auto rounded-md bg-white p-2">
+                                        <figcaption class="mt-2 text-sm text-gray-400">Figura 2.1. Diferenciación de la vesícula ótica en sus componentes dorsal y ventral.</figcaption>
+                                    </figure>
+                                    <p class="text-gray-300 mb-2">Paralelamente, las <strong class="text-yellow-300">células de la cresta neural</strong> migran y se agregan cerca de la vesícula para formar el <strong class="text-yellow-300">ganglio estatoacústico (vestibulococlear)</strong>. Este ganglio se divide para inervar tanto la porción coclear (auditiva) como la vestibular (equilibrio), estableciendo la conexión con el cerebro a través del <strong class="text-yellow-300">VIII par craneal</strong>.</p>
+                                    <p class="text-gray-300">Para proteger estas estructuras membranosas, el <strong class="text-yellow-300">mesénquima</strong> circundante se condensa y forma un molde de cartílago, la <strong class="text-yellow-300">cápsula ótica</strong>. Más tarde, esta cápsula se osifica para convertirse en la <strong class="text-yellow-300">porción petrosa del hueso temporal</strong>, una de las estructuras óseas más densas del cuerpo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pestaña Oído Medio -->
+                        <div id="medio" class="tab-content">
+                             <h2 class="text-3xl font-bold text-gray-100 mb-6">2. Desarrollo del Oído Medio</h2>
+                             <p class="mb-4 text-lg text-gray-300">El oído medio funciona como un sistema de amplificación mecánica. Su desarrollo está íntimamente ligado a los <strong class="text-yellow-300">arcos faríngeos</strong>, estructuras embrionarias clave en la formación de la cara y el cuello.</p>
+                             <div class="space-y-6">
+                                <div class="p-4 bg-gray-700/50 rounded-lg">
+                                    <h4 class="font-bold text-lg text-white mb-2">Cavidad Timpánica y Trompa de Eustaquio</h4>
+                                     <p class="text-gray-300 mb-2">El revestimiento epitelial del oído medio proviene del <strong class="text-yellow-300">endodermo</strong> de la <strong class="text-yellow-300">primera bolsa faríngea</strong>. Esta bolsa se expande lateralmente formando el <strong class="text-yellow-300">receso tubotimpánico</strong>. Su extremo distal se ensancha para crear la <strong class="text-yellow-300">cavidad timpánica primitiva</strong>, que envolverá a los huesecillos. Su porción proximal permanece estrecha y alargada, convirtiéndose en la <strong class="text-yellow-300">trompa faringotimpánica (Trompa de Eustaquio)</strong>, que mantiene la conexión con la faringe para igualar la presión del aire.</p>
+                                </div>
+                                <div class="p-4 bg-gray-700/50 rounded-lg">
+                                    <h4 class="font-bold text-lg text-white mb-2">Huesecillos y Músculos</h4>
+                                    <p class="text-gray-300 mb-2">Los tres <strong class="text-yellow-300">huesecillos</strong> del oído son derivados del <strong class="text-yellow-300">mesodermo</strong> de los dos primeros arcos faríngeos. Se forman como condensaciones de cartílago que luego se osifican:</p>
+                                     <ul class="text-gray-300 list-disc list-inside pl-2 mt-1 mb-3">
+                                        <li><strong class="text-white">Martillo y Yunque:</strong> Se originan del cartílago del <strong class="text-yellow-300">primer arco faríngeo</strong>, conocido como <strong class="text-yellow-300">cartílago de Meckel</strong>.</li>
+                                        <li><strong class="text-white">Estribo:</strong> Proviene del cartílago del <strong class="text-yellow-300">segundo arco faríngeo</strong>, llamado <strong class="text-yellow-300">cartílago de Reichert</strong>.</li>
+                                     </ul>
+                                     <div class="grid md:grid-cols-2 gap-6 mt-4">
+                                        <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                            <img src="https://o.quizlet.com/I7vhT.fpmCVnABO9UKOmJA.png" alt="Cartílagos embrionarios que dan origen a los huesecillos" class="w-full mx-auto h-auto rounded-md">
+                                            <figcaption class="mt-2 text-sm text-gray-400">Figura 3. Cartílagos de Meckel (primer arco) y Reichert (segundo arco).</figcaption>
+                                        </figure>
+                                        <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                            <img src="https://parsefiles.back4app.com/C7RuU97cMkytKZegqsk56nXeeX5cZcRlQJlYOAmc/9e4dd6f4415b159e6a9ed45078db08a2_FBFF2FFA-1039-5806-506E-F8A1957EE8CA.jpg" alt="Huesecillos del oído ya formados" class="w-full mx-auto h-auto rounded-md">
+                                            <figcaption class="mt-2 text-sm text-gray-400">Figura 3.1. Huesecillos (martillo, yunque y estribo) derivados de los cartílagos.</figcaption>
+                                        </figure>
+                                     </div>
+                                     <p class="text-gray-300 my-4">Los músculos que se insertan en los huesecillos también siguen esta regla de origen:</p>
+                                     <ul class="text-gray-300 list-disc list-inside pl-2 mt-1">
+                                        <li><strong class="text-white">Músculo tensor del tímpano (del martillo):</strong> Deriva del primer arco y, por lo tanto, es inervado por el nervio de ese arco, el <strong class="text-yellow-300">nervio trigémino (V par)</strong>.</li>
+                                        <li><strong class="text-white">Músculo estapedio (del estribo):</strong> Deriva del segundo arco y es inervado por el <strong class="text-yellow-300">nervio facial (VII par)</strong>.</li>
+                                     </ul>
+                                </div>
+                             </div>
+                        </div>
+
+                        <!-- Pestaña Oído Externo -->
+                        <div id="externo" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">3. Desarrollo del Oído Externo</h2>
+                            <p class="mb-4 text-lg text-gray-300">El oído externo actúa como un embudo para captar y dirigir el sonido hacia el tímpano.</p>
+                            <div class="space-y-6">
+                                <div class="p-4 bg-gray-700/50 rounded-lg">
+                                    <h4 class="font-bold text-lg text-white mb-2">Conducto Auditivo Externo</h4>
+                                    <p class="text-gray-300">El conducto se forma a partir de una invaginación del <strong class="text-yellow-300">ectodermo</strong> de la <strong class="text-yellow-300">primera hendidura faríngea</strong>. Al principio del tercer mes, las células ectodérmicas en el fondo de esta hendidura proliferan masivamente, formando un cordón celular sólido llamado <strong class="text-yellow-300">tapón meatal</strong>. Este tapón persiste hasta el <strong class="text-yellow-300">séptimo mes</strong>, cuando sus células centrales degeneran por apoptosis, creando un tubo hueco: el conducto auditivo externo. Si este proceso de canalización falla, puede resultar en <strong class="text-red-400">atresia del conducto y sordera de conducción</strong>.</p>
+                                    <div class="grid md:grid-cols-2 gap-6 mt-4">
+                                        <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                            <img src="https://images.slideplayer.es/17/5483108/slides/slide_6.jpg" alt="Desarrollo del conducto auditivo externo" class="w-full max-w-lg mx-auto h-auto rounded-md">
+                                            <figcaption class="mt-2 text-sm text-gray-400">Figura 4. Formación del conducto auditivo a partir de la primera hendidura faríngea.</figcaption>
+                                        </figure>
+                                        <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9s1HzkweEaf5hbZEoxMy-BhkT0N8VKpUEzQcI9cdWytZCn5YjghP7vtaQS7k88RgbjG0&usqp=CAU" alt="Canalización del tapón meatal" class="w-full max-w-lg mx-auto h-auto rounded-md">
+                                            <figcaption class="mt-2 text-sm text-gray-400">Figura 4.1. Canalización del tapón meatal para formar el conducto.</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="p-4 bg-gray-700/50 rounded-lg">
+                                    <h4 class="font-bold text-lg text-white mb-2">Pabellón Auricular (Oreja)</h4>
+                                    <p class="text-gray-300">La oreja se forma a partir de seis proliferaciones de <strong class="text-yellow-300">mesénquima</strong> llamadas <strong class="text-yellow-300">montículos auriculares</strong>, que aparecen alrededor de los bordes del <strong class="text-yellow-300">primer y segundo arcos faríngeos</strong>. Tres montículos provienen del primer arco y tres del segundo. Estos montículos crecen, migran y se fusionan de una manera muy precisa para esculpir la forma compleja del pabellón auricular. Debido a esta complejidad, las <strong class="text-red-400">malformaciones del pabellón</strong> (como apéndices preauriculares o microtia) son relativamente frecuentes y a veces se asocian con otros síndromes congénitos.</p>
+                                    <figure class="mt-4 bg-gray-900/50 p-4 rounded-lg text-center">
+                                        <img src="https://www.otorrinoweb.com/images/stories/T01_2/imgcache/01202-11_500x340.png" alt="Desarrollo del pabellón auricular" class="w-full max-w-md mx-auto h-auto rounded-md">
+                                        <figcaption class="mt-2 text-sm text-gray-400">Figura 5. Fusión de los montículos auriculares para formar la oreja.</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="p-4 bg-gray-700/50 rounded-lg">
+                                    <h4 class="font-bold text-lg text-white mb-2">Membrana Timpánica (Tímpano)</h4>
+                                    <p class="text-gray-300">El tímpano es una estructura de encuentro embriológico, lo que explica su composición <strong class="text-yellow-300">trilaminar</strong>:</p>
+                                    <ul class="text-gray-300 list-disc list-inside pl-2 mt-1">
+                                        <li><strong class="text-white">Capa Externa (<strong class="text-yellow-300">Ectodermo</strong>):</strong> Es la piel del fondo del conducto auditivo, derivada de la primera hendidura faríngea.</li>
+                                        <li><strong class="text-white">Capa Interna (<strong class="text-yellow-300">Endodermo</strong>):</strong> Es la mucosa del oído medio, derivada de la primera bolsa faríngea.</li>
+                                        <li><strong class="text-white">Capa Media (<strong class="text-yellow-300">Mesodermo</strong>):</strong> Es una capa intermedia de tejido conectivo fibroso (colágeno) que queda atrapada entre las otras dos.</li>
+                                    </ul>
+                                    <figure class="mt-4 bg-gray-900/50 p-4 rounded-lg text-center">
+                                        <img src="https://udocz-images.b-cdn.net/documents_html/269365-21c0d34ed1326ae73ac17b7912208acb/bg13.jpg?width=2688" alt="Desarrollo de la membrana timpánica" class="w-full max-w-lg mx-auto h-auto rounded-md">
+                                        <figcaption class="mt-2 text-sm text-gray-400">Figura 6. Origen trilaminar de la membrana timpánica.</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="p-4 bg-gray-700/50 rounded-lg">
+                                    <h4 class="font-bold text-lg text-white mb-2">Resumen de Orígenes</h4>
+                                    <figure class="mt-4 bg-gray-900/50 p-4 rounded-lg text-center">
+                                        <img src="https://cdn.lecturio.com/assets/Diagram-displaying-the-auditory-tube-which-extends-from-the-first-pharyngeal-pouch.jpg" alt="Resumen del desarrollo del oído a partir de las hendiduras y bolsas faríngeas" class="w-full max-w-xl mx-auto h-auto rounded-md bg-white p-1">
+                                        <figcaption class="mt-2 text-sm text-gray-400">Figura 7. Resumen del origen del oído a partir de la primera bolsa y hendidura faríngea.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña Resumen -->
+                        <div id="resumen" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">Resumen Cronológico</h2>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-700">
+                                    <thead class="bg-gray-700/50">
+                                        <tr>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-blue-300 uppercase tracking-wider">Semana de Gestación</th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-blue-300 uppercase tracking-wider">Oído Interno</th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-blue-300 uppercase tracking-wider">Oído Medio</th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-blue-300 uppercase tracking-wider">Oído Externo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-gray-800 divide-y divide-gray-700">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap font-medium text-white">Semana 3-4</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">Formación de la placoda y vesícula ótica.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap"></td>
+                                            <td class="px-6 py-4 whitespace-nowrap"></td>
+                                        </tr>
+                                        <tr class="bg-gray-700/20">
+                                            <td class="px-6 py-4 whitespace-nowrap font-medium text-white">Semana 5-7</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">Diferenciación de la vesícula.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">El receso tubotimpánico forma la cavidad.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">Se forman los montículos auriculares.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap font-medium text-white">Semana 8-12</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">El conducto coclear completa sus espirales.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">Huesecillos se forman como cartílago.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">Fusión de montículos para formar el pabellón.</td>
+                                        </tr>
+                                        <tr class="bg-gray-700/20">
+                                            <td class="px-6 py-4 whitespace-nowrap font-medium text-white">Meses 4-6</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">Osificación de la cápsula ótica.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">Osificación de los huesecillos.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">El conducto auditivo se alarga.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap font-medium text-white">Meses 7-9</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">Maduración del órgano de Corti.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">Reabsorción del mesénquima.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">Canalización del tapón meatal.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+            
+            <footer class="text-center mt-12 text-gray-500 text-sm">
+                <p>&copy; 2024 Guía de Embriología. Creado para facilitar el aprendizaje.</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        const tabNav = document.getElementById('tab-nav');
+        const tabBtns = tabNav.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const activeClasses = 'active-tab';
+        const inactiveClasses = 'inactive-tab';
+
+        tabNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            const clickedTab = e.target.closest('.tab-btn');
+            if (!clickedTab) return;
+
+            // Update button styles
+            tabBtns.forEach(btn => {
+                btn.classList.remove(activeClasses);
+                btn.classList.add(inactiveClasses);
+            });
+            clickedTab.classList.add(activeClasses);
+            clickedTab.classList.remove(inactiveClasses);
+
+            // Update content visibility
+            const tabId = clickedTab.dataset.tab;
+            tabContents.forEach(content => {
+                content.classList.toggle('active', content.id === tabId);
+            });
+        });
+    </script>
+</body>
+</html>
