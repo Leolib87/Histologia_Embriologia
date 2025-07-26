@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-gray-900">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Definitiva del Tejido Conectivo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1a202c; }
+        ::-webkit-scrollbar-thumb { background: #4a5568; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #718096; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .active-tab {
+            border-color: #60a5fa; /* border-blue-400 */
+            color: #60a5fa; /* text-blue-400 */
+            background-color: rgba(55, 65, 81, 0.5); /* bg-gray-700/50 */
+        }
+        .inactive-tab {
+            border-color: transparent;
+            color: #9ca3af; /* text-gray-400 */
+        }
+        .inactive-tab:hover {
+            color: #e5e7eb; /* hover:text-gray-200 */
+            border-color: #4b5563; /* hover:border-gray-500 */
+        }
+    </style>
+</head>
+<body class="h-full text-gray-200">
+
+    <div class="h-full overflow-y-auto">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+        
+            <header class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl font-bold text-blue-400">Guía Definitiva del Tejido Conectivo</h1>
+                <p class="text-lg text-gray-400 mt-2">Una exploración detallada del tejido más abundante y versátil del cuerpo.</p>
+            </header>
+
+            <main>
+                <div class="bg-gray-800 rounded-2xl shadow-2xl shadow-blue-500/10 overflow-hidden">
+                    <div class="border-b border-gray-700">
+                        <nav class="flex flex-wrap -mb-px" id="tab-nav">
+                            <a href="#" class="tab-btn active-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="intro">Introducción</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="celulas">Células y Fibras</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="propio">T.C. Propio</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="especializado">T.C. Especializado</a>
+                            <a href="#" class="tab-btn inactive-tab flex-grow sm:flex-grow-0 items-center justify-center w-1/2 md:w-auto text-center p-4 border-b-2 font-medium text-sm sm:text-base" data-tab="clinica">Clínica</a>
+                        </nav>
+                    </div>
+
+                    <div class="p-6 sm:p-8">
+                        <!-- Pestaña Introducción -->
+                        <div id="intro" class="tab-content active">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-4">1. Introducción y Componentes Fundamentales</h2>
+                            <p class="mb-4 text-lg text-gray-300">El tejido conectivo (o conjuntivo) es uno de los cuatro tipos básicos de tejido, junto con el epitelial, muscular y nervioso. Deriva del <strong class="text-yellow-300">mesénquima</strong>, un tejido embrionario compuesto por células pluripotenciales inmersas en una matriz laxa. Esta derivación común explica la diversidad de tejidos conectivos, desde la sangre fluida hasta el hueso sólido.</p>
+                            <p class="mb-6 text-lg text-gray-300">Su característica distintiva es la presencia de una abundante <strong class="text-yellow-300">matriz extracelular (MEC)</strong>, que separa ampliamente sus células y determina las propiedades físicas y funcionales del tejido.</p>
+                            
+                            <div class="my-8 space-y-8">
+                                <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                    <img src="https://www.felicidadrodriguez.com/wp-content/uploads/2013/09/conectivo.jpeg" alt="Diagrama de los componentes del tejido conectivo" class="w-full max-w-lg mx-auto h-auto rounded-md">
+                                    <figcaption class="mt-2 text-sm text-gray-400">Figura 1. Componentes del Tejido Conectivo: Células inmersas en la Matriz Extracelular (Fibras y Sustancia Fundamental).</figcaption>
+                                </figure>
+                                <figure class="bg-gray-900/50 p-4 rounded-lg text-center">
+                                    <img src="https://mmegias.webs.uvigo.es/a-iconos/conectivo-esquema.png" alt="Esquema de los tipos de tejido conectivo" class="w-full max-w-xl mx-auto h-auto rounded-md bg-white p-2">
+                                    <figcaption class="mt-2 text-sm text-gray-400">Esquema general de la clasificación de los tejidos conectivos.</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="bg-gray-700/50 p-6 rounded-lg border border-purple-500/30 mb-6">
+                                <h3 class="text-xl font-semibold text-purple-300 mb-3">La Matriz Extracelular (MEC) en Profundidad</h3>
+                                <p class="text-gray-300 mb-4">La MEC no es solo un relleno, es un entorno dinámico y complejo que regula el comportamiento celular. Se compone de:</p>
+                                <ul class="space-y-3 list-disc list-inside text-gray-300">
+                                    <li><strong class="text-white">Fibras Proteicas:</strong> Proporcionan resistencia y elasticidad.</li>
+                                    <li><strong class="text-white">Sustancia Fundamental:</strong> Un gel hidratado que contiene:
+                                        <ul class="pl-5 mt-2 space-y-2 list-['-_'] list-inside">
+                                            <li><strong class="text-yellow-300">Glucosaminoglucanos (GAGs):</strong> Largos polisacáridos no ramificados con alta carga negativa (ej. ácido hialurónico). <strong class="text-white">Definición:</strong> Actúan como esponjas moleculares que atraen y retienen grandes cantidades de agua, formando un gel hidratado que resiste fuerzas de compresión.</li>
+                                            <li><strong class="text-yellow-300">Proteoglucanos:</strong> GAGs unidos a una proteína central (ej. agrecano). <strong class="text-white">Definición:</strong> Forman enormes agregados que estructuran la matriz, filtran moléculas y se unen a factores de crecimiento.</li>
+                                            <li><strong class="text-yellow-300">Glucoproteínas Multiadhesivas:</strong> (ej. fibronectina, laminina). <strong class="text-white">Definición:</strong> Proteínas que actúan como "pegamento" molecular, conectando las células a la MEC y a otros componentes de la matriz, guiando la migración celular.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-gray-700/50 p-6 rounded-lg border border-green-500/30">
+                                <h3 class="text-xl font-semibold text-green-300 mb-3">Funciones Generales Ampliadas</h3>
+                                <ul class="space-y-2 list-disc list-inside text-gray-300">
+                                    <li><strong>Soporte Estructural:</strong> Forma el estroma (armazón de soporte) de órganos como el hígado y los ganglios linfáticos, y constituye el esqueleto (hueso, cartílago).</li>
+                                    <li><strong>Conexión y Anclaje:</strong> Une tejidos y órganos (tendones, ligamentos) y forma las cápsulas fibrosas que envuelven a los órganos.</li>
+                                    <li><strong>Medio de Intercambio:</strong> La sustancia fundamental facilita el transporte de nutrientes, gases y desechos entre la sangre y las células de otros tejidos.</li>
+                                    <li><strong>Defensa y Protección:</strong> Es el escenario de la respuesta inflamatoria e inmunitaria, albergando macrófagos, mastocitos y células migratorias. Además, su viscosidad ralentiza la propagación de patógenos.</li>
+                                    <li><strong>Almacenamiento y Aislamiento:</strong> El tejido adiposo almacena energía (triglicéridos) y proporciona aislamiento térmico, mientras que el hueso es el principal reservorio de calcio y fosfato del cuerpo.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña Células y Fibras -->
+                        <div id="celulas" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">2. Células y Fibras: Los Arquitectos y Materiales</h2>
+                            <div class="grid lg:grid-cols-2 gap-8">
+                                <!-- Columna de Células -->
+                                <div class="space-y-6">
+                                    <h3 class="text-2xl font-semibold text-blue-300">Células del Tejido Conectivo</h3>
+                                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                                        <h4 class="font-bold text-lg text-white mb-2">Células Residentes (Fijas)</h4>
+                                        <p class="text-gray-400 mb-1"><strong>Fibroblastos:</strong> La célula principal. Sintetizan y secretan todos los componentes de la MEC. Son activos en el crecimiento y la cicatrización. Su forma inactiva se llama fibrocito.</p>
+                                        <p class="text-gray-400 mb-1"><strong>Adipocitos:</strong> Especializados en almacenar lípidos. Funcionan también como un órgano endocrino.</p>
+                                        <p class="text-gray-400 mb-1"><strong>Macrófagos (Histiocitos):</strong> Derivan de los monocitos. Son fagocitos profesionales y células presentadoras de antígenos, cruciales para la defensa y la limpieza de tejidos.</p>
+                                        <p class="text-gray-400 mb-1"><strong>Mastocitos (Células Cebadas):</strong> Orquestan la respuesta inflamatoria y las reacciones alérgicas. La liberación de <strong class="text-yellow-300">histamina</strong> de sus gránulos aumenta la permeabilidad de los vasos sanguíneos, lo que permite la fuga de plasma hacia la MEC y causa el <strong class="text-yellow-300">edema</strong> (hinchazón).</p>
+                                        <p class="text-gray-400"><strong>Miofibroblastos:</strong> Híbrido entre fibroblasto y célula muscular lisa. Importantes en la contracción de las heridas.</p>
+                                    </div>
+                                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                                        <h4 class="font-bold text-lg text-white mb-2">Células Transitorias (Migratorias)</h4>
+                                        <p class="text-gray-300 mb-3">Se denominan "transitorias" porque no residen permanentemente en el tejido conectivo. Tienen un <strong class="text-yellow-300">origen hematopoyético</strong> (se forman en la médula ósea), <strong class="text-yellow-300">circulan en la sangre</strong> y <strong class="text-yellow-300">migran</strong> hacia el tejido conectivo en respuesta a estímulos específicos, como una <strong class="text-yellow-300">respuesta inflamatoria</strong> o una infección. Este proceso de migración dirigida se conoce como <strong class="text-yellow-300">quimiotaxis</strong>.</p>
+                                        <ul class="space-y-2 text-gray-400">
+                                            <li><strong>Plasmocitos:</strong> <strong class="text-white">Función:</strong> Son fábricas de <strong class="text-yellow-300">anticuerpos</strong> (inmunoglobulinas). Se desarrollan a partir de linfocitos B activados y son clave en la inmunidad humoral.</li>
+                                            <li><strong>Linfocitos:</strong> <strong class="text-white">Función:</strong> Células centrales de la respuesta inmunitaria adaptativa. Hay varios tipos (T, B, NK) con funciones de reconocimiento de antígenos y destrucción de células infectadas.</li>
+                                            <li><strong>Neutrófilos:</strong> <strong class="text-white">Función:</strong> Son los primeros en llegar a un sitio de inflamación aguda. Su principal función es la <strong class="text-yellow-300">fagocitosis</strong> de bacterias y otros patógenos.</li>
+                                            <li><strong>Eosinófilos:</strong> <strong class="text-white">Función:</strong> Combaten <strong class="text-yellow-300">infecciones parasitarias</strong> y modulan reacciones alérgicas.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Columna de Fibras -->
+                                <div class="space-y-6">
+                                    <h3 class="text-2xl font-semibold text-blue-300">Fibras de la Matriz Extracelular</h3>
+                                     <div class="p-4 bg-gray-700/50 rounded-lg">
+                                        <h4 class="font-bold text-lg text-white">Fibras de Colágeno</h4>
+                                        <p class="text-gray-400">Son las proteínas más abundantes del cuerpo humano. Ofrecen una increíble <strong class="text-yellow-300">resistencia a la tensión</strong>. Tipos clave:</p>
+                                        <ul class="text-gray-400 list-disc list-inside pl-2 mt-1">
+                                            <li><strong>Tipo I:</strong> El más común. En dermis, hueso, tendones, ligamentos.</li>
+                                            <li><strong>Tipo II:</strong> Principalmente en el cartílago hialino y elástico.</li>
+                                            <li><strong>Tipo III:</strong> Forma las fibras reticulares.</li>
+                                            <li><strong>Tipo IV:</strong> Forma la lámina basal de los epitelios.</li>
+                                        </ul>
+                                    </div>
+                                     <div class="p-4 bg-gray-700/50 rounded-lg">
+                                        <h4 class="font-bold text-lg text-white">Fibras Reticulares</h4>
+                                        <p class="text-gray-400">Compuestas por colágeno tipo III. Son extremadamente delgadas y forman una <strong class="text-yellow-300">red de soporte (estroma)</strong> en órganos hematopoyéticos y linfoides. Se tiñen de negro con sales de plata (son argirófilas).</p>
+                                    </div>
+                                     <div class="p-4 bg-gray-700/50 rounded-lg">
+                                        <h4 class="font-bold text-lg text-white">Fibras Elásticas</h4>
+                                        <p class="text-gray-400">Compuestas de una proteína central de <strong class="text-yellow-300">elastina</strong> rodeada por microfibrillas de <strong class="text-yellow-300">fibrilina</strong>. Permiten que los tejidos se estiren y recuperen su forma original (retroceso elástico), esencial en la piel, pulmones y grandes arterias.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pestaña Tejido Conectivo Propio -->
+                        <div id="propio" class="tab-content">
+                             <h2 class="text-3xl font-bold text-gray-100 mb-6">3. Clasificación del Tejido Conectivo Propio</h2>
+                             <div class="space-y-8">
+                                <div class="p-6 bg-gray-700/50 rounded-lg border border-gray-600">
+                                    <h3 class="text-2xl font-semibold text-blue-300 mb-2">Tejido Conectivo Laxo (Areolar)</h3>
+                                    <div class="grid md:grid-cols-2 gap-4 items-center">
+                                        <div>
+                                            <p class="text-gray-300 mb-2"><strong>Descripción:</strong> Se caracteriza por una baja densidad de fibras, una gran cantidad de sustancia fundamental y una población celular diversa. Es flexible, bien vascularizado y poco resistente a la tensión.</p>
+                                            <p class="text-gray-300"><strong>Función y Ubicación:</strong> Rellena espacios entre órganos, forma la lámina propia bajo los epitelios, rodea vasos sanguíneos y nervios. Es el principal sitio de las respuestas inmunitarias e inflamatorias.</p>
+                                        </div>
+                                        <div class="space-y-4">
+                                            <figure>
+                                                <img src="https://mmegias.webs.uvigo.es/a-imagenes-grandes/imagenes/conectivo-laxo.jpg" alt="Micrografía de Tejido Conectivo Laxo 1" class="w-full h-auto rounded-md">
+                                            </figure>
+                                            <figure>
+                                                <img src="https://bilab.ucsc.cl/wp-content/uploads/sites/27/2022/05/Tejido-Conectivo-Laxo.jpg" alt="Micrografía de Tejido Conectivo Laxo 2" class="w-full h-auto rounded-md">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6 bg-gray-700/50 rounded-lg border border-gray-600">
+                                    <h3 class="text-2xl font-semibold text-blue-300 mb-2">Tejido Conectivo Denso</h3>
+                                    <p class="text-gray-300 mb-4">Predominan las fibras de colágeno sobre las células y la sustancia fundamental. Su principal función es la resistencia mecánica.</p>
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div class="p-4 bg-gray-900/50 rounded-lg">
+                                            <h4 class="font-bold text-lg text-white">Denso Irregular (No Modelado)</h4>
+                                            <p class="text-gray-400">Los gruesos haces de colágeno están dispuestos en una red tridimensional sin orientación fija. Esto proporciona una gran resistencia a la tensión ejercida desde <strong class="text-yellow-300">múltiples direcciones</strong>. Se encuentra en la dermis reticular, submucosa de órganos huecos y cápsulas de órganos.</p>
+                                            <figure class="mt-4">
+                                                <img src="https://mmegias.webs.uvigo.es/a-iconos/conectivo-denso-irregular-piel-cerdo.jpg" alt="Micrografía de Tejido Conectivo Denso Irregular" class="w-full h-auto rounded-md">
+                                                <figcaption class="mt-2 text-xs text-gray-500 text-center">Figura 4. Conectivo denso irregular en la dermis de la piel de un mamífero. Teñido con tricómicos de Gomori.</figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="p-4 bg-gray-900/50 rounded-lg">
+                                            <h4 class="font-bold text-lg text-white">Denso Regular (Modelado)</h4>
+                                            <p class="text-gray-400">Los haces de colágeno están densamente empaquetados y alineados de forma paralela. Ofrece máxima resistencia a la tensión en <strong class="text-yellow-300">una dirección específica</strong>. Es el componente principal de tendones, ligamentos y aponeurosis. Tiene un metabolismo bajo y una curación lenta.</p>
+                                            <figure class="mt-4">
+                                                <img src="https://mmegias.webs.uvigo.es/a-imagenes-grandes/imagenes/conectivo-regular.jpg" alt="Micrografía de Tejido Conectivo Denso Regular" class="w-full h-auto rounded-md">
+                                                <figcaption class="mt-2 text-xs text-gray-500 text-center">Órgano: tendón, conectivo denso regular. Especie: ratón (Mus musculus; mamíferos). Técnica: teñido con hematoxilina-eosina en secciones de 8 micras de parafina.</figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña Tejido Conectivo Especializado -->
+                        <div id="especializado" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">4. Tejidos Conectivos Especializados</h2>
+                            <div class="space-y-8">
+                               <div class="p-6 bg-gray-700/50 rounded-lg border border-green-500/30">
+                                   <h3 class="text-2xl font-semibold text-green-300 mb-2">Tejido Adiposo</h3>
+                                   <div class="grid md:grid-cols-2 gap-4 items-start">
+                                       <div>
+                                           <p class="text-gray-300 mb-2"><strong>Blanco (Unilocular):</strong> La principal reserva de energía del cuerpo. Cada célula contiene una única gran gota lipídica. También funciona como un órgano endocrino, secretando hormonas como la <strong class="text-white">leptina</strong> (regula el apetito) y la <strong class="text-white">adiponectina</strong>.</p>
+                                           <p class="text-gray-300"><strong>Pardo (Multilocular):</strong> Especializado en la termogénesis (producción de calor). Sus células contienen múltiples gotas de grasa y una enorme cantidad de mitocondrias que expresan la proteína <strong class="text-white">UCP1 (termogenina)</strong>, que desacopla la fosforilación oxidativa para generar calor en lugar de ATP.</p>
+                                       </div>
+                                       <div class="space-y-4">
+                                            <figure>
+                                                <img src="https://mmegias.webs.uvigo.es/a-iconos/adiposo-vista-general.jpg" alt="Tejido adiposo blanco" class="w-full h-auto rounded-md">
+                                                <figcaption class="mt-2 text-xs text-gray-500 text-center">Figura 4. Tejido adiposo blanco teñido con tricrómico de Masson.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="https://mmegias.webs.uvigo.es/a-imagenes-grandes/imagenes/adiposo-pardo.jpg" alt="Tejido adiposo pardo" class="w-full h-auto rounded-md">
+                                                <figcaption class="mt-2 text-xs text-gray-500 text-center">Órgano: grasa en torno al riñón, tejido adiposo pardo. Especie: ratón (Mus musculus; mamíferos). Técnica: hematoxilina eosina en cortes de 8 micras de parafina.</figcaption>
+                                            </figure>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="p-6 bg-gray-700/50 rounded-lg border border-green-500/30">
+                                   <h3 class="text-2xl font-semibold text-green-300 mb-2">Tejido Reticular</h3>
+                                   <div class="grid md:grid-cols-2 gap-4 items-center">
+                                       <p class="text-gray-300">Forma un delicado armazón tridimensional (estroma) de fibras reticulares (colágeno tipo III) que soporta las células funcionales (parénquima) de órganos como el <strong class="text-white">hígado, bazo, ganglios linfáticos y médula ósea</strong>. Crea un microambiente esencial para la hematopoyesis y la función linfoide.</p>
+                                       <figure>
+                                           <img src="https://mmegias.webs.uvigo.es/a-imagenes-grandes/imagenes/conectivo-reticular.jpg" alt="Micrografía de Tejido Reticular" class="w-full h-auto rounded-md">
+                                           <figcaption class="mt-2 text-xs text-gray-500 text-center">Órgano: bazo, conectivo reticular. Especie: ratón (Mus musculus; mamíferos). Técnica: tinción argéntica en cortes de 8 micras de parafina.</figcaption>
+                                       </figure>
+                                   </div>
+                               </div>
+                               <div class="p-6 bg-gray-700/50 rounded-lg border border-green-500/30">
+                                   <h3 class="text-2xl font-semibold text-green-300 mb-2">Tejido Elástico</h3>
+                                   <div class="grid md:grid-cols-2 gap-4 items-center">
+                                       <p class="text-gray-300">Compuesto predominantemente por fibras elásticas gruesas y onduladas, a menudo dispuestas en láminas fenestradas. Proporciona una notable capacidad de estiramiento y retroceso. Es crucial en la pared de las <strong class="text-white">grandes arterias (aorta)</strong> para mantener el flujo sanguíneo, en los <strong class="text-white">ligamentos elásticos</strong> de la columna vertebral y en las <strong class="text-white">cuerdas vocales</strong>.</p>
+                                       <figure>
+                                           <img src="https://mmegias.webs.uvigo.es/a-imagenes-grandes/imagenes/conectivo-denso-elastico.jpg" alt="Micrografía de Tejido Elástico" class="w-full h-auto rounded-md">
+                                           <figcaption class="mt-2 text-xs text-gray-500 text-center">Órgano: arteria elática, fibras elásticas. Especie: rata (Rattus norvegicus; mamíferos). Técnica: corte de 8 micras de parafina, tricrómico de Mallory.</figcaption>
+                                       </figure>
+                                   </div>
+                               </div>
+                               <div class="p-6 bg-gray-700/50 rounded-lg border border-purple-500/30">
+                                   <h3 class="text-2xl font-semibold text-purple-300 mb-2">Tejido Cartilaginoso</h3>
+                                   <div class="grid md:grid-cols-2 gap-4 items-center">
+                                       <p class="text-gray-300">Tejido de soporte firme pero flexible, avascular y sin inervación. Sus células son los condrocitos. Tipos: <strong class="text-white">Hialino</strong> (superficies articulares, tráquea), <strong class="text-white">Elástico</strong> (pabellón auricular, epiglotis), y <strong class="text-white">Fibrocartílago</strong> (discos intervertebrales, sínfisis del pubis).</p>
+                                       <figure>
+                                           <img src="https://mmegias.webs.uvigo.es/a-iconos/cartilago-hialino-hioides.png" alt="Micrografía de Tejido Cartilaginoso" class="w-full h-auto rounded-md">
+                                           <figcaption class="mt-2 text-xs text-gray-500 text-center">Figura 2. Imagen de cartílago hialino del hueso hioides de rata donde se observa osificación endocondral.</figcaption>
+                                       </figure>
+                                   </div>
+                               </div>
+                               <div class="p-6 bg-gray-700/50 rounded-lg border border-purple-500/30">
+                                   <h3 class="text-2xl font-semibold text-purple-300 mb-2">Tejido Óseo</h3>
+                                   <div class="grid md:grid-cols-2 gap-4 items-center">
+                                       <p class="text-gray-300">Tejido de soporte rígido y altamente vascularizado. Su matriz está mineralizada con cristales de <strong class="text-white">hidroxiapatita</strong>, lo que le confiere su dureza. Está en constante remodelación por osteoblastos (forman hueso), osteocitos (mantienen matriz) y osteoclastos (resorben hueso).</p>
+                                       <figure>
+                                           <img src="https://mmegias.webs.uvigo.es/a-imagenes-grandes/imagenes/oseo-osteocitos.jpg" alt="Micrografía de Tejido Óseo" class="w-full h-auto rounded-md">
+                                           <figcaption class="mt-2 text-xs text-gray-500 text-center">Órgano: hueso. A, B) Hueso compacto y C- F) Hueso en formación. Especie: varias. Técnica: A, B) Desgaste. C-F) Descalcificación, hematoxilina-eosina.</figcaption>
+                                       </figure>
+                                   </div>
+                               </div>
+                               <div class="p-6 bg-gray-700/50 rounded-lg border border-purple-500/30">
+                                   <h3 class="text-2xl font-semibold text-purple-300 mb-2">Tejido Sanguíneo</h3>
+                                   <div class="grid md:grid-cols-2 gap-4 items-center">
+                                       <p class="text-gray-300">Un tipo único de tejido conectivo con una matriz extracelular líquida (plasma). Contiene células (eritrocitos, leucocitos) y plaquetas, y es vital para el transporte, la defensa y la hemostasia.</p>
+                                       <figure>
+                                           <img src="https://mmegias.webs.uvigo.es/a-iconos/sangre-vasos.jpg" alt="Micrografía de Tejido Sanguíneo" class="w-full h-auto rounded-md">
+                                           <figcaption class="mt-2 text-xs text-gray-500 text-center">Figura 1. Elementos celulares de la sangre en el interior de los vasos sanguíneos. En mamíferos los eritrocitos no tienen núcleo, luego todas las células nucleadas de la sangre son leucocitos.</figcaption>
+                                       </figure>
+                                   </div>
+                               </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pestaña Clínica -->
+                        <div id="clinica" class="tab-content">
+                            <h2 class="text-3xl font-bold text-gray-100 mb-6">5. Relevancia Clínica: Patologías del Tejido Conectivo</h2>
+                            <p class="text-lg text-gray-300 mb-6">Dado que el tejido conectivo está presente en todo el cuerpo, sus patologías (a menudo llamadas colagenopatías) son sistémicas y pueden afectar a múltiples órganos. Se pueden clasificar en hereditarias, autoinmunes y adquiridas.</p>
+                            
+                            <div class="space-y-6">
+                                <div class="p-6 bg-gray-700/50 rounded-lg border border-red-500/30">
+                                    <h3 class="text-xl font-semibold text-red-300 mb-3">Trastornos Hereditarios</h3>
+                                    <ul class="space-y-3 list-disc list-inside text-gray-300">
+                                        <li><strong>Síndrome de Marfan:</strong> Mutación en el gen FBN1 que codifica la fibrilina-1, afectando a las fibras elásticas. Causa problemas esqueléticos (extremidades largas, aracnodactilia), oculares (luxación del cristalino) y cardiovasculares graves (aneurisma de aorta).</li>
+                                        <li><strong>Síndrome de Ehlers-Danlos:</strong> Grupo heterogéneo de trastornos por defectos en la síntesis o estructura del colágeno. Resulta en hipermovilidad articular, piel hiperextensible, cicatrización anormal y fragilidad vascular.</li>
+                                        <li><strong>Osteogénesis Imperfecta:</strong> "Enfermedad de los huesos de cristal". Defectos genéticos en el colágeno tipo I que provocan una extrema fragilidad ósea, resultando en fracturas múltiples.</li>
+                                    </ul>
+                                </div>
+                                <div class="p-6 bg-gray-700/50 rounded-lg border border-red-500/30">
+                                    <h3 class="text-xl font-semibold text-red-300 mb-3">Enfermedades Autoinmunes</h3>
+                                     <ul class="space-y-3 list-disc list-inside text-gray-300">
+                                        <li><strong>Lupus Eritematoso Sistémico (LES):</strong> El sistema inmunitario genera autoanticuerpos contra componentes celulares, causando inflamación crónica y daño en piel, articulaciones, riñones, corazón y otros órganos.</li>
+                                        <li><strong>Artritis Reumatoide:</strong> Enfermedad inflamatoria crónica que ataca principalmente las articulaciones (membrana sinovial), llevando a la destrucción del cartílago y el hueso.</li>
+                                        <li><strong>Esclerodermia (Esclerosis Sistémica):</strong> Se caracteriza por una producción excesiva de colágeno (fibrosis) que endurece la piel y puede afectar a órganos internos como pulmones, corazón y tracto digestivo.</li>
+                                    </ul>
+                                </div>
+                                <div class="p-6 bg-gray-700/50 rounded-lg border border-red-500/30">
+                                    <h3 class="text-xl font-semibold text-red-300 mb-3">Trastornos Adquiridos y de Reparación</h3>
+                                     <ul class="space-y-3 list-disc list-inside text-gray-300">
+                                        <li><strong>Escorbuto:</strong> Deficiencia de Vitamina C, un cofactor esencial para la hidroxilación del procolágeno. Impide la formación de fibras de colágeno estables, causando mala cicatrización, sangrado de encías y hemorragias.</li>
+                                        <li><strong>Fibrosis y Cicatrización Queloide:</strong> La reparación de una herida implica la deposición de tejido conectivo. En la fibrosis, este proceso es excesivo y patológico (ej. cirrosis hepática). Una cicatriz queloide es un crecimiento exagerado del tejido cicatricial que se extiende más allá de los bordes de la herida original.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+            
+            <footer class="text-center mt-12 text-gray-500 text-sm">
+                <p>&copy; 2024 Guía Definitiva. Creado para facilitar el aprendizaje.</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        const tabNav = document.getElementById('tab-nav');
+        const tabBtns = tabNav.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const activeClasses = 'active-tab';
+        const inactiveClasses = 'inactive-tab';
+
+        tabNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            const clickedTab = e.target.closest('.tab-btn');
+            if (!clickedTab) return;
+
+            // Update button styles
+            tabBtns.forEach(btn => {
+                btn.classList.remove(activeClasses);
+                btn.classList.add(inactiveClasses);
+            });
+            clickedTab.classList.add(activeClasses);
+            clickedTab.classList.remove(inactiveClasses);
+
+            // Update content visibility
+            const tabId = clickedTab.dataset.tab;
+            tabContents.forEach(content => {
+                content.classList.toggle('active', content.id === tabId);
+            });
+        });
+    </script>
+</body>
+</html>
