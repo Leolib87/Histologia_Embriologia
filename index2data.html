@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guía Interactiva de Histología y Desarrollo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    }
+    #bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Coloca el canvas detrás de todo */
+    }
+    .content-wrapper {
+      position: relative;
+      z-index: 1; /* Asegura que el contenido esté sobre el canvas */
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1a202c; /* Un poco más oscuro que el fondo de las tarjetas */
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4a5568;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #718096;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+  <!-- Canvas para la animación de Three.js -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Contenedor principal reestructurado para un layout full-screen robusto -->
+  <div class="content-wrapper min-h-screen flex flex-col">
+    
+    <!-- El contenido principal ahora usa flex-grow para ocupar el espacio disponible -->
+    <main class="flex-grow flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold text-blue-400 mb-4">Guía Interactiva de Histología y Desarrollo</h1>
+      <p class="text-lg text-gray-400 mb-8 max-w-3xl">Selecciona una sección para comenzar tu estudio</p>
+
+      <!-- Bloque de Información Formal del Curso -->
+      <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 mb-10 w-full max-w-3xl text-left">
+        <h3 class="text-xl font-semibold text-gray-200 mb-4 border-b border-gray-600 pb-2">Información del Programa Formativo</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
+          <div>
+            <p class="text-gray-400">Universidad:</p>
+            <p class="font-semibold text-gray-300">Universidad de Playa Ancha</p>
+          </div>
+          <div>
+            <p class="text-gray-400">Facultad:</p>
+            <p class="font-semibold text-gray-300">Ciencias de la Salud</p>
+          </div>
+          <div>
+            <p class="text-gray-400">Carrera:</p>
+            <p class="font-semibold text-gray-300">Fonoaudiología</p>
+          </div>
+          <div>
+            <p class="text-gray-400">Académico:</p>
+            <p class="font-semibold text-gray-300">Leandro Torres Díaz, PhD</p>
+          </div>
+          <div class="sm:col-span-2">
+            <p class="text-gray-400">Nombre del Programa:</p>
+            <p class="font-semibold text-gray-300">Bases de las Ciencias Biológicas en Salud</p>
+          </div>
+          <div>
+            <p class="text-gray-400">Créditos:</p>
+            <p class="font-semibold text-gray-300">6</p>
+          </div>
+          <div>
+            <p class="text-gray-400">Semestre:</p>
+            <p class="font-semibold text-gray-300">1</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- La rejilla ahora es más ancha en pantallas grandes pero se adapta a pequeñas -->
+      <div class="grid w-full max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Tarjeta de Tejido Epitelial -->
+        <a href="tejido_epitelial.html" class="block bg-gray-800/80 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-blue-500/20">
+          <h2 class="text-2xl font-semibold text-blue-300 mb-2">Tejido Epitelial</h2>
+          <p class="text-gray-400 text-sm">Funciones, tipos y estructuras que recubren superficies.</p>
+        </a>
+        <!-- Tarjeta de Tejido Conectivo -->
+        <a href="tejido_conectivo.html" class="block bg-gray-800/80 backdrop-blur-sm border border-green-500/30 hover:border-green-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-green-500/20">
+          <h2 class="text-2xl font-semibold text-green-300 mb-2">Tejido Conectivo</h2>
+          <p class="text-gray-400 text-sm">Sustento estructural, fibras, células y matriz extracelular.</p>
+        </a>
+        <!-- Tarjeta de Tejido Muscular -->
+        <a href="tejido_muscular.html" class="block bg-gray-800/80 backdrop-blur-sm border border-pink-500/30 hover:border-pink-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-pink-500/20">
+          <h2 class="text-2xl font-semibold text-pink-300 mb-2">Tejido Muscular</h2>
+          <p class="text-gray-400 text-sm">Contracción, tipos de músculo y fisiología.</p>
+        </a>
+        <!-- Tarjeta de Tejido Nervioso -->
+        <a href="tejido_nervioso.html" class="block bg-gray-800/80 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-purple-500/20">
+          <h2 class="text-2xl font-semibold text-purple-300 mb-2">Tejido Nervioso</h2>
+          <p class="text-gray-400 text-sm">Neuronas, glía y organización del sistema nervioso.</p>
+        </a>
+        <!-- Tarjeta de Embriología -->
+        <a href="embriologia.html" class="block bg-gray-800/80 backdrop-blur-sm border border-yellow-500/30 hover:border-yellow-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-yellow-500/20">
+          <h2 class="text-2xl font-semibold text-yellow-300 mb-2">Embriología</h2>
+          <p class="text-gray-400 text-sm">Fecundación, gastrulación, capas germinativas y más.</p>
+        </a>
+        <!-- Tarjeta de Desarrollo del Oído -->
+        <a href="desarrollo_oido.html" class="block bg-gray-800/80 backdrop-blur-sm border border-cyan-500/30 hover:border-cyan-400 rounded-xl p-6 transition hover:shadow-lg hover:shadow-cyan-500/20">
+          <h2 class="text-2xl font-semibold text-cyan-300 mb-2">Desarrollo del Oído</h2>
+          <p class="text-gray-400 text-sm">Otocisto, vesículas, cavidades y morfogénesis del oído.</p>
+        </a>
+      </div>
+    </main>
+
+    <!-- El footer se empuja a la parte inferior de la pantalla -->
+    <footer class="w-full p-4 text-sm text-center text-gray-500">
+      <p>&copy; 2024 Guía Interactiva. Diseñada para el aprendizaje autónomo.</p>
+    </footer>
+  </div>
+
+<script>
+  // --- Configuración de Three.js ---
+  let scene, camera, renderer, network;
+  const canvas = document.getElementById('bg-canvas');
+  const mouse = new THREE.Vector2();
+
+  function init() {
+    // Crear la escena
+    scene = new THREE.Scene();
+
+    // Crear la cámara
+    camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 15;
+
+    // Crear el renderizador
+    renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+      alpha: true,
+      antialias: true
+    });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    // --- Creación de la red estática ---
+    network = new THREE.Group(); // Usamos un grupo para rotar todo junto
+    
+    const particlesCount = 250;
+    const connectionDistance = 2.8;
+    const particlesGeometry = new THREE.BufferGeometry();
+    const positions = new Float32Array(particlesCount * 3);
+    const particlePositions = [];
+
+    // Generar partículas en una esfera para una distribución más agradable
+    for (let i = 0; i < particlesCount; i++) {
+        const phi = Math.acos(-1 + (2 * i) / particlesCount);
+        const theta = Math.sqrt(particlesCount * Math.PI) * phi;
+        const p = new THREE.Vector3();
+        p.setFromSphericalCoords(8, phi, theta); // Radio de 8
+        positions[i * 3] = p.x;
+        positions[i * 3 + 1] = p.y;
+        positions[i * 3 + 2] = p.z;
+        particlePositions.push(p);
+    }
+    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+    const pMaterial = new THREE.PointsMaterial({
+      color: 0x60A5FA, // Un azul más brillante
+      size: 0.1,
+      blending: THREE.AdditiveBlending,
+      transparent: true,
+      sizeAttenuation: true
+    });
+    
+    const particles = new THREE.Points(particlesGeometry, pMaterial);
+    network.add(particles);
+
+    // Generar las conexiones
+    const lineGeometry = new THREE.BufferGeometry();
+    const linePositions = [];
+
+    for (let i = 0; i < particlesCount; i++) {
+        for (let j = i + 1; j < particlesCount; j++) {
+            const p1 = particlePositions[i];
+            const p2 = particlePositions[j];
+            const dist = p1.distanceTo(p2);
+
+            if (dist < connectionDistance) {
+                linePositions.push(p1.x, p1.y, p1.z);
+                linePositions.push(p2.x, p2.y, p2.z);
+            }
+        }
+    }
+    lineGeometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(linePositions), 3));
+
+    const lineMaterial = new THREE.LineBasicMaterial({
+      color: 0x4A5568, // Gris azulado
+      transparent: true,
+      opacity: 0.15
+    });
+
+    const lines = new THREE.LineSegments(lineGeometry, lineMaterial);
+    network.add(lines);
+    
+    scene.add(network);
+
+    // --- Event Listeners ---
+    window.addEventListener('resize', onWindowResize);
+    window.addEventListener('mousemove', onMouseMove);
+  }
+
+  function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  }
+
+  function onMouseMove(event) {
+    // Normalizar coordenadas del ratón (-1 a +1)
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+  }
+
+  const clock = new THREE.Clock();
+
+  function animate() {
+    requestAnimationFrame(animate);
+    const elapsedTime = clock.getElapsedTime();
+
+    // Rotación automática muy lenta
+    network.rotation.y = elapsedTime * 0.05;
+
+    // Rotación sutil basada en la posición del ratón
+    // Usamos lerp para suavizar el movimiento
+    network.rotation.x += (mouse.y * 0.1 - network.rotation.x) * 0.05;
+    network.rotation.y += (mouse.x * 0.1 - network.rotation.y + (elapsedTime * 0.05)) * 0.05;
+
+
+    renderer.render(scene, camera);
+  }
+
+  // --- Iniciar todo ---
+  init();
+  animate();
+</script>
+
+</body>
+</html>
